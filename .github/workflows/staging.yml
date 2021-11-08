@@ -3,17 +3,18 @@ name: staging, build, vercel
 on:
   pull_request:
     branches:
-      -master
+      - master
   push:
     branches:
-      -master
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -uses: actions/checkout@v1
-      -name: deploy to vercel
-        id: branch_deploy_vercel
-        run: |
-          URL=$(npx vercel --prod --confirm -n ${{ secrets.VERCEL_PROJECT_ID}} -t ${{secrets.VERCEL_TOKEN}}  --scope ${{secrets.VERCEL_ORG_ID}}  -b DEPLOY_ENV=staging -e DEPLOY_ENV=staging)
+      - uses: actions/checkout@v1
+
+      - name: deploy to Vercel
+          id: branch_deploy_vercel
+          run: |
+            URL=$(npx vercel --prod --confirm -n ${{ secrets.VERCEL_PROJECT_ID }} -t ${{ secrets.VERCEL_TOKEN }} --scope ${{ secrets.VERCEL_ORG_ID }} -b DEPLOY_ENV=staging -e DEPLOY_ENV=staging)
