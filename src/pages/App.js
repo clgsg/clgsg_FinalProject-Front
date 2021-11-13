@@ -1,10 +1,11 @@
+import { ChakraProvider } from "@chakra-ui/react"
 
-function App() {
+function MyApp({ Component, pageProps }) {
   return (
-    <div className="App">
-        <h1>Basic app page</h1>
-    </div>
-  );
+    <ChakraProvider>
+      <Component {...pageProps} />
+    </ChakraProvider>
+  )
 }
 
-export default App;
+export default MyApp
