@@ -1,8 +1,11 @@
 import React from "react";
 
+import { registerLocale } from "react-datepicker";
+
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import { DateUtils } from "react-day-picker";
 import "react-day-picker/lib/style.css";
+
 
 import dateFnsFormat from "date-fns/format";
 import dateFnsParse from "date-fns/parse";
@@ -20,7 +23,7 @@ function formatDate(date, format, locale) {
 }
 
 export default function Calendar() {
-	const FORMAT = "dd-mm-yyyy";
+	const FORMAT = "DD-MM-YYYY";
 	return (
 		<DayPickerInput
 			formatDate={formatDate}
