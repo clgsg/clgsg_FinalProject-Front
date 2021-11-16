@@ -1,7 +1,7 @@
 import TUsersGames from "../../components/Tables/TUsersGames";
 
-const UsersGames = () => {
+const UserGames = () => {
 	return <TUsersGames/>;
 };
 
-export default UsersGames;
+export default UserGames;

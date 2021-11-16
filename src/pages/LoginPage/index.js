@@ -1,13 +1,14 @@
-import LoginForm from "components/LoginForm";
+import { Link } from "@chakra-ui/layout";
+import LoginForm from "components/Forms/LoginForm";
 
 const LoginPage = () => {
 	return (
 		<>
 			<LoginForm />
-			<p>
-				¿Aún no tienes cuenta? ¡Regístrate {" "}
-				<a href={`register`}>aquí!</a>
-			</p>
+			<h3>
+				¿Aún no tienes cuenta? ¡Regístrate
+				<Link href={`register`}>aquí!</Link>
+			</h3>
 		</>
 	);
 };

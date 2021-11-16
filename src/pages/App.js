@@ -1,5 +1,5 @@
 // import { ChakraProvider } from "@chakra-ui/react"
-import Homepage from './Home/index.js'
+import Homepage from './homepage/index.js'
 
 
 function App({ Component, pageProps }) {
