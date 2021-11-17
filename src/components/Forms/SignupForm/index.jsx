@@ -1,27 +1,47 @@
 import Button from "components/Button";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, useField } from "formik";
 
 import * as yup from "yup";
 import YupPassword from "yup-password";
 YupPassword(yup);
 
 const schema = yup.object().shape({
+	username: yup
+		.string()
+		.min(8, "¡No tan corto!")
+		.max(15, "¡No tan largo!")
+		.required("Campo obligatorio"),
 	email: yup.string().email("Email no válido").required("Campo obligatorio"),
 	password: yup
 		.string()
 		.password("Contraseña no válida")
 		.min(8, "¡No tan corta!")
 		.max(15, "¡No tan larga!")
-		.required("Campo obligatorio")
-		.matches("^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$",
-      "La contraseña debe incluir un mínimo de 8 caracteres y, al menos, una mayúscula, una minúscula, un número y un carácter especial"),
+		.required("Campo obligatorio"),
 });
 
-export const SignupForm = () => (
+
+const MyCheckbox = ({ children, ...props }) => {
+	const [field, meta] = useField({ ...props, type: "checkbox" });
+	return (
+		<>
+			<label className="checkbox">
+				<input {...field} {...props} type="checkbox" />
+				{children}
+			</label>
+			{meta.touched && meta.error ? (
+				<div className="error">{meta.error}</div>
+			) : null}
+		</>
+	);
+};
+
+export const LoginForm = () => (
 	<div>
-		<h1>Regístrate</h1>
+		<h1>Acceder</h1>
 		<Formik
 			initialValues={{
+				username: "",
 				email: "",
 				password: "",
 			}}
@@ -32,6 +52,10 @@ export const SignupForm = () => (
 		>
 			{({ errors, touched }) => (
 				<Form>
+					<Field name="username" />
+					{errors.username && touched.username ? (
+						<div>{errors.username}</div>
+					) : null}
 					<Field name="email" type="email" />
 					{errors.email && touched.email ? (
 						<div>{errors.email}</div>
@@ -40,7 +64,10 @@ export const SignupForm = () => (
 					{errors.password && touched.password ? (
 						<div>{errors.password}</div>
 					) : null}
-					<Button type="submit">Registrarse</Button>
+				<MyCheckbox name="acceptedTerms">
+					Acepto las condiciones de uso y el tratamiento de mis datos
+				</MyCheckbox>
+					<Button type="submit">Registrarme</Button>
 				</Form>
 			)}
 		</Formik>

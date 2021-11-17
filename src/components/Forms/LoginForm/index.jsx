@@ -11,13 +11,7 @@ const schema = yup.object().shape({
 		.required("Campo obligatorio"),
 	password: yup
 		.string()
-		.password("Contraseña no válida")
-		.min(8, "¡No tan corta!")
-		.max(15, "¡No tan larga!")
-		.required("Campo obligatorio")
-		.matches("^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$",
-      "La contraseña debe incluir un mínimo de 8 caracteres y, al menos, una mayúscula, una minúscula, un número y un carácter especial"
-    ),
+		.password("Contraseña no válida"),
 });
 
 export const LoginForm = () => (
