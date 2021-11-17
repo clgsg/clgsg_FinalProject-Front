@@ -14,7 +14,7 @@ const schema = yup.object().shape({
 		.string()
 		.email()
 		.required('Campo obligatorio')
-		.oneOf([yup.ref("email"), null], "Emails must match"),
+		.oneOf([yup.ref("email"), null], "Los emails no coinciden"),
 	password: yup
 		.string()
 		.password("Contraseña no válida")

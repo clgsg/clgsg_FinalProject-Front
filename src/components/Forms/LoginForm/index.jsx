@@ -6,12 +6,9 @@ import YupPassword from "yup-password";
 YupPassword(yup);
 
 const schema = yup.object().shape({
-	username: yup
+	username_email: yup
 		.string()
-		.min(8, "¡No tan corto!")
-		.max(15, "¡No tan largo!")
 		.required("Campo obligatorio"),
-	email: yup.string().email("Email no válido").required("Campo obligatorio"),
 	password: yup
 		.string()
 		.password("Contraseña no válida")
@@ -28,8 +25,7 @@ export const LoginForm = () => (
 		<h1>Acceder</h1>
 		<Formik
 			initialValues={{
-				username: "",
-				email: "",
+				username_email: "",
 				password: "",
 			}}
 			validationSchema={schema}
@@ -39,13 +35,9 @@ export const LoginForm = () => (
 		>
 			{({ errors, touched }) => (
 				<Form>
-					<Field name="username" />
-					{errors.username && touched.username ? (
-						<div>{errors.username}</div>
-					) : null}
-					<Field name="email" type="email"/>
-					{errors.email && touched.email ? (
-						<div>{errors.email}</div>
+					<Field name="username_email" />
+					{errors.username_email && touched.username_email ? (
+						<div>{errors.username_email}</div>
 					) : null}
 					<Field name="password" type="password" />
 					{errors.password && touched.password ? (
