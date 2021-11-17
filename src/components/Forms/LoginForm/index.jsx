@@ -6,12 +6,18 @@ import YupPassword from "yup-password";
 YupPassword(yup);
 
 const schema = yup.object().shape({
-	username: yup.string()
+	username: yup
+		.string()
 		.min(8, "¡No tan corto!")
 		.max(15, "¡No tan largo!")
-		.required("Obligatorio"),
-	email: yup.string().email("Email no válido").required("Obligatorio"),
-	password: yup.string().password("Invalid password").required("Obligatorio"),
+		.required("Campo obligatorio"),
+	email: yup.string().email("Email no válido").required("Campo obligatorio"),
+	password: yup
+		.string()
+		.password("Contraseña no válida")
+		.min(8, "¡No tan corta!")
+		.max(15, "¡No tan larga!")
+		.required("Campo obligatorio"),
 });
 
 export const LoginForm = () => (
@@ -42,7 +48,7 @@ export const LoginForm = () => (
 					{errors.password && touched.password ? (
 						<div>{errors.password}</div>
 					) : null}
-					<Button type="submit">Submit</Button>
+					<Button type="submit">Acceder</Button>
 				</Form>
 			)}
 		</Formik>
