@@ -1,8 +1,24 @@
-import { Button } from "components/Buttons";
-import { ShortText } from "components/Forms/elements/ShortText";
-import { RadioButton } from "components/Forms/elements/RadioButton";
+import { useHistory } from "react-router-dom";
+
+import Button from "components/Button";
+import ShortText from "components/Forms/elements/ShortText";
+import RadioButton from "components/Forms/elements/RadioButton";
 
 function UserProfileForm() {
+
+
+
+
+
+		const handleClick = () => {
+			if (Button.className === "LoginBttn") {
+				history.push("/login");
+			}
+			if (Button.className === "SignupBttn") {
+				history.push("/register");
+			}
+		};
+
 	return (
 		<>
 			<img alt="user"></img>

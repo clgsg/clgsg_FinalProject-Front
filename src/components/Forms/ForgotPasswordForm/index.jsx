@@ -1,18 +1,29 @@
-import { Button } from "components/Buttons";
-import { Password } from "components/Forms/elements/Password"
+import { useHistory } from "react-router-dom";
+
+import { Button, ButtonGroup } from "@chakra-ui/react";
 import { ShortText } from "components/Forms/elements/ShortText";
 
 function ForgotPasswordForm() {
+
+
+	// const handleClick = () => {
+	// 	if (Button.className === "LoginBttn") {
+	// 		history.push("/login");
+	// 	}
+	// 	if (Button.className === "SignupBttn") {
+	// 		history.push("/register");
+	// 	}
+	// };
+
+
 	return (
 		<>
-			<h2>Nuevo email</h2>
+			<h2>Email</h2>
 			<ShortText/>
 			<h2>Escríbelo otra vez</h2>
 			<ShortText/>
-			<h2>Introduce tu contraseña</h2>
-			<Password/>
 			<Button text={"Cancelar"}></Button>
-			<Button text={"Confirmar"}></Button>
+			<Button type="submit" text={"Enviar email"}></Button>
 		</>
 	);
 }

@@ -1,9 +1,10 @@
-import { Button } from "@chakra-ui/button";
-import {MultiCheckbox} from "Forms/elements/MultiCheckbox"
-import {RadioButton} from "Forms/elements/RadioButton"
+import Button from "components/Button";
+import {MultiCheckbox} from "components/Forms/elements/MultiCheckbox"
+import {RadioButton} from "components/Forms/elements/RadioButton"
 
 
  function UserPreferencesForm(){
+
 	return (
 		<>
 			<h2>Qué</h2>
@@ -12,8 +13,8 @@ import {RadioButton} from "Forms/elements/RadioButton"
 			<RadioButton></RadioButton>
 			<h2>Hombres/Mujeres/Mixto</h2>
 			<MultiCheckbox></MultiCheckbox>
-			<Button text={"Cancelar"}></Button>
-			<Button text={"Confirmar"}></Button>
+			<Button>Cancelar</Button>
+			<Button>Confirmar</Button>
 		</>
 	);
 }

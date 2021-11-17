@@ -1,16 +1,8 @@
-import { Redirect } from "react-router";
-import Routes from "routes";
-import { useHistory } from "react-router-dom";
+import { Button } from "@chakra-ui/react";
 
-function Button(props) {
-	const history = useHistory();
-	const handleOnSubmit = () => {
-		history.push(`/${props.to}`);
-	};
+export default Button = () => {
 	return (
-		<button className="button" onClick={handleOnSubmit}>
-			{props.text}
-		</button>
+		<Button colorScheme="teal" height="50px" width="200px" variant="solid" spacing="6" direction="row"></Button>
 	);
 }
-export default Button;
+

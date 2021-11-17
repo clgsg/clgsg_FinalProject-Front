@@ -1,3 +1,5 @@
+import { useHistory } from "react-router-dom";
+
 import {
 	Table,
 	Thead,
@@ -10,6 +12,20 @@ import {
 import Button from "components/Button";
 
 const TUsersGames = () => {
+
+
+
+
+
+		const handleClick = () => {
+			if (Button.className === "LoginBttn") {
+				history.push("/login");
+			}
+			if (Button.className === "SignupBttn") {
+				history.push("/register");
+			}
+		};
+
 	return (
 		<>
 			{/* <h2>Estas son tus pachangas</h2> */}
