@@ -20,9 +20,9 @@ const schema = yup.object().shape({
 		.required("Campo obligatorio"),
 });
 
-export const LoginForm = () => (
+export const SignupForm = () => (
 	<div>
-		<h1>Acceder</h1>
+		<h1>Regístrate</h1>
 		<Formik
 			initialValues={{
 				email: "",

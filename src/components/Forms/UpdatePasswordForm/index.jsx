@@ -6,26 +6,23 @@ import YupPassword from "yup-password";
 YupPassword(yup);
 
 const schema = yup.object().shape({
-	username: yup
+	email: yup.string().email().required("Campo obligatorio"),
+	confirmEmail: yup
 		.string()
-		.min(8, "¡No tan corto!")
-		.max(15, "¡No tan largo!")
-		.required("Campo obligatorio"),
-	email: yup.string().email("Email no válido").required("Campo obligatorio"),
+		.email()
+		.required("Campo obligatorio")
+		.oneOf([yup.ref("email"), null], "Emails must match"),
 	password: yup
 		.string()
 		.password("Contraseña no válida")
 		.min(8, "¡No tan corta!")
 		.max(15, "¡No tan larga!")
-		.required("Campo obligatorio")
-		.matches("^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$",
-      "La contraseña debe incluir un mínimo de 8 caracteres y, al menos, una mayúscula, una minúscula, un número y un carácter especial"
-    ),
+		.required("Campo obligatorio"),
 });
 
-export const LoginForm = () => (
+export const UpdatePasswordForm = () => (
 	<div>
-		<h1>Acceder</h1>
+		<h1>Cambio de contraseña</h1>
 		<Formik
 			initialValues={{
 				username: "",
@@ -43,7 +40,7 @@ export const LoginForm = () => (
 					{errors.username && touched.username ? (
 						<div>{errors.username}</div>
 					) : null}
-					<Field name="email" type="email"/>
+					<Field name="email" type="email" />
 					{errors.email && touched.email ? (
 						<div>{errors.email}</div>
 					) : null}
@@ -51,7 +48,8 @@ export const LoginForm = () => (
 					{errors.password && touched.password ? (
 						<div>{errors.password}</div>
 					) : null}
-					<Button type="submit">Acceder</Button>
+					<Button>Cancelar</Button>
+					<Button type="submit">Confirmar</Button>
 				</Form>
 			)}
 		</Formik>
