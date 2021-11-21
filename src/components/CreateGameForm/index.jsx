@@ -1,5 +1,5 @@
 import { Select } from "@chakra-ui/react";
-import Button from "components/Button";
+import Bttn from "components/Button";
 import Calendar from "components/DateAndTime/Calendar.jsx";
 
 function FilterGameForm() {
@@ -53,12 +53,12 @@ function FilterGameForm() {
 				<option value="option17">IDB Ambulatorio (El Paraíso)</option>
 				<option value="option18">IDB Americio</option>
 			</Select>
-			<Button className="ClearBttn" text="Borrar" to=""></Button>
-			<Button
+			<Bttn className="ClearBttn" text="Borrar" to=""></Bttn>
+			<Bttn
 				className="FilterBttn"
 				text="Buscar"
 				to="browseGamesResults"
-			></Button>
+			></Bttn>
 		</>
 	);
 }

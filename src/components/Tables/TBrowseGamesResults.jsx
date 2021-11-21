@@ -1,4 +1,3 @@
-import { useHistory } from "react-router-dom";
 
 import {
 	Table,
@@ -9,21 +8,9 @@ import {
 	Th,
 	Td,
 } from "@chakra-ui/react";
-import Button from "components/Button"
+import Bttn from "components/Button";
 
 const TBrowseGamesResults = () => {
-
-
-
-
-		const handleClick = () => {
-			if (Button.className === "LoginBttn") {
-				history.push("/login");
-			}
-			if (Button.className === "SignupBttn") {
-				history.push("/register");
-			}
-		};
 
 	return (
 		<>
@@ -50,24 +37,10 @@ const TBrowseGamesResults = () => {
 						<Td>No</Td>
 						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Button text={"Apuntarme"} />
+							<Bttn text={"Apuntarme"} />
 						</Td>
 						<Td>
-							<Button text={"Ver detalles"} />
-						</Td>
-					</Tr>
-					<Tr>
-						<Td>Baloncesto</Td>
-						<Td>21-12-2021</Td>
-						<Td>12:00</Td>
-						<Td>Masculino</Td>
-						<Td>No</Td>
-						<Td>IDB La Vaguada</Td>
-						<Td>
-							<Button text={"Apuntarme"} />
-						</Td>
-						<Td>
-							<Button text={"Ver detalles"} />
+							<Bttn text={"Ver detalles"} />
 						</Td>
 					</Tr>
 					<Tr>
@@ -78,10 +51,24 @@ const TBrowseGamesResults = () => {
 						<Td>No</Td>
 						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Button text={"Apuntarme"} />
+							<Bttn text={"Apuntarme"} />
 						</Td>
 						<Td>
-							<Button text={"Ver detalles"} />
+							<Bttn text={"Ver detalles"} />
+						</Td>
+					</Tr>
+					<Tr>
+						<Td>Baloncesto</Td>
+						<Td>21-12-2021</Td>
+						<Td>12:00</Td>
+						<Td>Masculino</Td>
+						<Td>No</Td>
+						<Td>IDB La Vaguada</Td>
+						<Td>
+							<Bttn text={"Apuntarme"} />
+						</Td>
+						<Td>
+							<Bttn text={"Ver detalles"} />
 						</Td>
 					</Tr>
 					<Tr>
@@ -92,10 +79,10 @@ const TBrowseGamesResults = () => {
 						<Td>Sí</Td>
 						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Button text={"Apuntarme"} />
+							<Bttn text={"Apuntarme"} />
 						</Td>
 						<Td>
-							<Button text={"Ver detalles"} />
+							<Bttn text={"Ver detalles"} />
 						</Td>
 					</Tr>
 				</Tbody>

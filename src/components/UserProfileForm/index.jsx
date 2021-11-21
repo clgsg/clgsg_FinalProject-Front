@@ -1,45 +1,30 @@
-import { useHistory } from "react-router-dom";
 
-import Button from "components/Button";
-import ShortText from "components/Forms/elements/ShortText";
-import RadioButton from "components/Forms/elements/RadioButton";
+import Bttn from "components/Button";
+
 
 function UserProfileForm() {
-
-
-
-
-
-		const handleClick = () => {
-			if (Button.className === "LoginBttn") {
-				history.push("/login");
-			}
-			if (Button.className === "SignupBttn") {
-				history.push("/register");
-			}
-		};
 
 	return (
 		<>
 			<img alt="user"></img>
 			<h2>Nombre</h2>
-			<ShortText />
+			{/* <ShortText /> */}
 			<h2>Apellidos</h2>
-			<ShortText />
+			{/* <ShortText /> */}
 			<h2>Usuario</h2>
-			<ShortText />
+			{/* <ShortText /> */}
 			<h2>Email</h2>
-			<ShortText />
-			<Button text={"Cambiar email"} />
+			{/* <ShortText /> */}
+			<Bttn text={"Cambiar email"} />
 			<h2>Contraseña</h2>
-			<Button text={"Cambiar contraseña"} />
+			<Bttn text={"Cambiar contraseña"} />
 			<h2>Fecha de nacimiento (dd-mm-aaaa)</h2>
-			<ShortText />
+			{/* <ShortText /> */}
 			<h2>Eres</h2>
-			<RadioButton label={"Hombre"} />
-			<RadioButton label={"Mujer"} />
+			{/* <RadioBttn label={"Hombre"} /> */}
+			{/* <RadioBttn label={"Mujer"} /> */}
 
-			<Button text={"Acceder"} />
+			<Bttn text={"Acceder"} />
 		</>
 	);
 }

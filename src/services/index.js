@@ -1,6 +1,15 @@
 import axios from "axios";
+import { getAllGames } from "./games";
+
 const client = axios.create({
-	baseURL: "https://pokeapi.co/api/v2",
-	headers: { "Content-Type": "application/json" },
+	baseURL: process.env.REACT_APP_BACK_URL,
+	headers: {
+		"Content-Type": "application/json",
+	},
 });
-export default client;
+const games = {
+	getGames: getAllGames(client),
+
+};
+
+export { games };

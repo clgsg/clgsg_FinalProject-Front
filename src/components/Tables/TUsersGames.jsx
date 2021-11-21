@@ -1,5 +1,3 @@
-import { useHistory } from "react-router-dom";
-
 import {
 	Table,
 	Thead,
@@ -9,23 +7,9 @@ import {
 	Th,
 	Td,
 } from "@chakra-ui/react";
-import Button from "components/Button";
+import Bttn from "components/Button";
 
 const TUsersGames = () => {
-
-
-
-
-
-		const handleClick = () => {
-			if (Button.className === "LoginBttn") {
-				history.push("/login");
-			}
-			if (Button.className === "SignupBttn") {
-				history.push("/register");
-			}
-		};
-
 	return (
 		<>
 			{/* <h2>Estas son tus pachangas</h2> */}
@@ -51,24 +35,10 @@ const TUsersGames = () => {
 						<Td>No</Td>
 						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Button text={"Ver detalles"} />
+							<Bttn text={"Ver detalles"} />
 						</Td>
 						<Td>
-							<Button text={"Borrarme"} />
-						</Td>
-					</Tr>
-					<Tr>
-						<Td>Baloncesto</Td>
-						<Td>21-12-2021</Td>
-						<Td>12:00</Td>
-						<Td>Masculino</Td>
-						<Td>No</Td>
-						<Td>IDB La Vaguada</Td>
-						<Td>
-							<Button text={"Ver detalles"} />
-						</Td>
-						<Td>
-							<Button text={"Borrarme"} />
+							<Bttn text={"Borrarme"} />
 						</Td>
 					</Tr>
 					<Tr>
@@ -79,10 +49,24 @@ const TUsersGames = () => {
 						<Td>No</Td>
 						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Button text={"Ver detalles"} />
+							<Bttn text={"Ver detalles"} />
 						</Td>
 						<Td>
-							<Button text={"Borrarme"} />
+							<Bttn text={"Borrarme"} />
+						</Td>
+					</Tr>
+					<Tr>
+						<Td>Baloncesto</Td>
+						<Td>21-12-2021</Td>
+						<Td>12:00</Td>
+						<Td>Masculino</Td>
+						<Td>No</Td>
+						<Td>IDB La Vaguada</Td>
+						<Td>
+							<Bttn text={"Ver detalles"} />
+						</Td>
+						<Td>
+							<Bttn text={"Borrarme"} />
 						</Td>
 					</Tr>
 					<Tr>
@@ -93,10 +77,10 @@ const TUsersGames = () => {
 						<Td>Sí</Td>
 						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Button text={"Ver detalles"} />
+							<Bttn text={"Ver detalles"} />
 						</Td>
 						<Td>
-							<Button text={"Borrarme"} />
+							<Bttn text={"Borrarme"} />
 						</Td>
 					</Tr>
 				</Tbody>

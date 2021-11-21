@@ -1,4 +1,4 @@
-import Button from "components/Button";
+import Bttn from "components/Button";
 import { Formik, Form, Field, useField } from "formik";
 
 import * as yup from "yup";
@@ -36,7 +36,7 @@ const MyCheckbox = ({ children, ...props }) => {
 	);
 };
 
-export const LoginForm = () => (
+const SignupForm = () => (
 	<div>
 		<h1>Acceder</h1>
 		<Formik
@@ -67,9 +67,11 @@ export const LoginForm = () => (
 				<MyCheckbox name="acceptedTerms">
 					Acepto las condiciones de uso y el tratamiento de mis datos
 				</MyCheckbox>
-					<Button type="submit">Registrarme</Button>
+					<Bttn type="submit">Registrarme</Bttn>
 				</Form>
 			)}
 		</Formik>
 	</div>
 );
+
+export default SignupForm

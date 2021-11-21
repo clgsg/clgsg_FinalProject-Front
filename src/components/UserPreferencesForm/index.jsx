@@ -1,6 +1,5 @@
-import Button from "components/Button";
+import Bttn from "components/Button";
 import {MultiCheckbox} from "components/Forms/elements/MultiCheckbox"
-import {RadioButton} from "components/Forms/elements/RadioButton"
 
 
  function UserPreferencesForm(){
@@ -10,11 +9,11 @@ import {RadioButton} from "components/Forms/elements/RadioButton"
 			<h2>Qué</h2>
 			<MultiCheckbox></MultiCheckbox>
 			<h2>Deporte adaptado</h2>
-			<RadioButton></RadioButton>
+			{/* <RadioButton></RadioButton> */}
 			<h2>Hombres/Mujeres/Mixto</h2>
 			<MultiCheckbox></MultiCheckbox>
-			<Button>Cancelar</Button>
-			<Button>Confirmar</Button>
+			<Bttn text={"Cancelar"}/>
+			<Bttn text={"Confirmar"}/>
 		</>
 	);
 }

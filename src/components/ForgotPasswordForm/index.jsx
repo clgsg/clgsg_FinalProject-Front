@@ -1,4 +1,4 @@
-import Button from "components/Button";
+import Bttn from "components/Button";
 import { Formik, Form, Field } from "formik";
 
 import * as yup from "yup";
@@ -20,7 +20,7 @@ const schema = yup.object().shape({
 		.required("Campo obligatorio"),
 });
 
-export const UpdateEmailForm = () => (
+const ForgotPasswordForm = () => (
 	<div>
 		<h1>Cambio de email</h1>
 		<Formik
@@ -48,10 +48,11 @@ export const UpdateEmailForm = () => (
 					{errors.password && touched.password ? (
 						<div>{errors.password}</div>
 					) : null}
-					<Button>Cancelar</Button>
-					<Button type="submit">Confirmar</Button>
+					<Bttn>Cancelar</Bttn>
+					<Bttn type="submit">Confirmar</Bttn>
 				</Form>
 			)}
 		</Formik>
 	</div>
 );
+export default ForgotPasswordForm;

@@ -1,4 +1,4 @@
-import Button from "components/Button";
+import Bttn from "components/Button";
 import { Formik, Form, Field } from "formik";
 
 import * as yup from "yup";
@@ -6,15 +6,11 @@ import YupPassword from "yup-password";
 YupPassword(yup);
 
 const schema = yup.object().shape({
-	username_email: yup
-		.string()
-		.required("Campo obligatorio"),
-	password: yup
-		.string()
-		.password("Contraseña no válida"),
+	username_email: yup.string().required("Campo obligatorio"),
+	password: yup.string().password("Contraseña no válida"),
 });
 
-export const LoginForm = () => (
+const LoginForm = () => (
 	<div>
 		<h1>Acceder</h1>
 		<Formik
@@ -37,9 +33,11 @@ export const LoginForm = () => (
 					{errors.password && touched.password ? (
 						<div>{errors.password}</div>
 					) : null}
-					<Button type="submit">Acceder</Button>
+					<Bttn type="submit">Acceder</Bttn>
 				</Form>
 			)}
 		</Formik>
 	</div>
 );
+
+export default LoginForm;

@@ -5,7 +5,7 @@ import {
 	Tr,
 	Td,
 } from "@chakra-ui/react";
-import Button from "components/Button";
+import Bttn from "components/Button";
 
 const GameDetails = () => {
 	return (
@@ -79,7 +79,7 @@ const GameDetails = () => {
 					</Tr>
 				</Tbody>
 			</Table>
-			<Button text={"¡Me apunto!"} />
+			<Bttn text={"¡Me apunto!"} />
 		</>
 	);
 };

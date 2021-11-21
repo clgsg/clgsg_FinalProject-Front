@@ -1,19 +1,7 @@
-import { useHistory } from "react";
 import TUpcomingGames from "../../components/Tables/TUpcomingGames";
-import Button from "components/Button";
+import Bttn from "components/Button";
 
 const Homepage = () => {
-	const history = useHistory()
-
-	const handleClick = () =>{
-		if (Button.className === 'LoginBttn'){
-			history.push('/login')
-		}
-		if (Button.className === "SignupBttn") {
-			history.push("/register");
-		}
-	}
-
 	return (
 		<>
 			<h1> Esta es la página de inicio </h1>
@@ -23,18 +11,18 @@ const Homepage = () => {
 			</div>
 			<div>
 				<p>¿Ya tienes cuenta?</p>
-				<Button className="LoginBttn"
+				<Bttn className="LoginBttn"
 					text="Acceder"
-					onClick={handleClick}
-					to="login">Log in</Button>
+					// onClick={handleClick}
+					to="login">Log in</Bttn>
 			</div>
 			<div>
 				<p>¿Aún no tienes cuenta?</p>
-				<Button
+				<Bttn
 					className="SignupBttn"
 					text='Registrarse'
-					onClick={handleClick}
-					to="signup"></Button>
+					// onClick={handleClick}
+					to="signup"></Bttn>
 			</div>
 		</>
 	);

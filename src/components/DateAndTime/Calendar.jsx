@@ -1,28 +1,24 @@
 import {useState} from "react";
-import { registerLocale } from "react-datepicker";
 
-import {DatePicker} from "react-datepicker/DayPickerInput";
-import { DateUtils } from "react-datepicker";
-import "react-day-picker/lib/style.css";
-
-
-import {dateFnsParse } from "date-fns/parse";
-import {dateFnsFormat} from "date-fns/format"
+// import {DatePicker} from "react-datepicker/DayPickerInput";
+// import { DateUtils } from "react-datepicker";
+// import "react-day-picker/lib/style.css";
 
 
 
-export default function Calendar() {
-	function parseDate(str, format, locale) {
-		const parsed = dateFnsParse(str, format, new Date(), { locale });
-		if (DateUtils.isDate(parsed)) {
-			return parsed;
-		}
-		return undefined;
-	}
+
+function Calendar() {
+	// function parseDate(str, format, locale) {
+	// 	const parsed = dateFnsParse(str, format, new Date(), { locale });
+	// 	if (DateUtils.isDate(parsed)) {
+	// 		return parsed;
+	// 	}
+	// 	return undefined;
+	// }
 	const [startDate, setStartDate] = useState(new Date());
 		return (
 			<>
-				<DatePicker
+				{/* <DatePicker */}
 					selected={startDate}
 					onChange={(date) => setStartDate(date)}
 					locale="es-ES"
@@ -33,7 +29,8 @@ export default function Calendar() {
 					placeholderText="Selecciona fecha y hora"
 					withPortal
 					calendarStartDay={1}
-				/>
+				{/* /> */}
 			</>
 		);
 }
+export default Calendar

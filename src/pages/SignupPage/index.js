@@ -1,5 +1,5 @@
 import { Link } from "@chakra-ui/layout";
-import SignupForm from "components/Forms/SignupForm";
+import SignupForm from "components/SignupForm";
 
 const SignupPage = () => {
 	return (

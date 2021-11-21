@@ -1,37 +1,24 @@
-import { useHistory } from "react-router-dom";
 
 import { Link } from "@chakra-ui/layout";
-import Button from "components/Button";
-import UpdateEmailForm from "components/Forms/UpdateEmail";
+import Bttn from "components/Button";
+import UpdateEmailForm from "components/UpdateEmailForm";
 
 const updateEmail = () => {
-
-
-
-
-		const handleClick = () => {
-			if (Button.className === "CancelBttn") {
-				history.push("/profile");
-			}
-			if (Button.className === "UpdateEmailBttn") {
-				history.push("/profile");
-			}
-		};
 
 
 	return (
 		<>
 			<UpdateEmailForm />
-			<Button
+			<Bttn
 				className="CancelBttn"
 				text="Cancelar"
-				onClick={handleClick}
+				// onClick={}
 				to="profile"
 			/>
-			<Button
+			<Bttn
 				className="UpdateEmailBttn"
 				text="Confirmar"
-				onClick={handleClick}
+				// onClick={}
 				to="profile"
 			/>
 
