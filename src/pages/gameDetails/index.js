@@ -1,11 +1,13 @@
 import {
+	Button,
+	ButtonGroup,
 	Link,
 	Table,
 	Tbody,
 	Tr,
 	Td,
 } from "@chakra-ui/react";
-import Bttn from "components/Button";
+;
 
 const GameDetails = () => {
 	return (
@@ -79,7 +81,10 @@ const GameDetails = () => {
 					</Tr>
 				</Tbody>
 			</Table>
-			<Bttn text={"¡Me apunto!"} />
+			<ButtonGroup>
+			<Button text={"Volver"}/>
+			<Button text={"¡Me apunto!"} />
+			</ButtonGroup>
 		</>
 	);
 };

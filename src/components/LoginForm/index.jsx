@@ -1,4 +1,4 @@
-import Bttn from "components/Button";
+import {Button} from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
 
 import * as yup from "yup";
@@ -20,7 +20,7 @@ const LoginForm = () => (
 			}}
 			validationSchema={schema}
 			onSubmit={(values) => {
-				console.log(values);
+				console.log("Login form data:", values);
 			}}
 		>
 			{({ errors, touched }) => (
@@ -33,7 +33,7 @@ const LoginForm = () => (
 					{errors.password && touched.password ? (
 						<div>{errors.password}</div>
 					) : null}
-					<Bttn type="submit">Acceder</Bttn>
+					<Button type="submit">Acceder</Button>
 				</Form>
 			)}
 		</Formik>

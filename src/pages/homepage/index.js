@@ -1,30 +1,25 @@
 import TUpcomingGames from "../../components/Tables/TUpcomingGames";
-import Bttn from "components/Button";
+import { Button, Box, Stack} from "@chakra-ui/react";
+// import { Theme } from "@chakra-ui/theme";
 
 const Homepage = () => {
 	return (
-		<>
+		<Stack>
 			<h1> Esta es la página de inicio </h1>
-			<div>
+			<Box>
 				<h2> Próximas pachangas:</h2>
 				<TUpcomingGames />
-			</div>
-			<div>
+			</Box>
+			<Box>
 				<p>¿Ya tienes cuenta?</p>
-				<Bttn className="LoginBttn"
+				<Button className="LoginButton"
 					text="Acceder"
-					// onClick={handleClick}
-					to="login">Log in</Bttn>
-			</div>
-			<div>
+					to="login">Acceder</Button>
+
 				<p>¿Aún no tienes cuenta?</p>
-				<Bttn
-					className="SignupBttn"
-					text='Registrarse'
-					// onClick={handleClick}
-					to="signup"></Bttn>
-			</div>
-		</>
+				<Button>Registrarse</Button>
+			</Box>
+		</Stack>
 	);
 }
 

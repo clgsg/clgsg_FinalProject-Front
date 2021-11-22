@@ -1,4 +1,4 @@
-import Bttn from "components/Button";
+import {Button} from "@chakra-ui/react";
 import { Formik, Form, Field, useField } from "formik";
 
 import * as yup from "yup";
@@ -38,7 +38,7 @@ const MyCheckbox = ({ children, ...props }) => {
 
 const SignupForm = () => (
 	<div>
-		<h1>Acceder</h1>
+		<h1>Formulario de registro</h1>
 		<Formik
 			initialValues={{
 				username: "",
@@ -47,7 +47,7 @@ const SignupForm = () => (
 			}}
 			validationSchema={schema}
 			onSubmit={(values) => {
-				console.log(values);
+				console.log("signup form data:", values);
 			}}
 		>
 			{({ errors, touched }) => (
@@ -67,7 +67,7 @@ const SignupForm = () => (
 				<MyCheckbox name="acceptedTerms">
 					Acepto las condiciones de uso y el tratamiento de mis datos
 				</MyCheckbox>
-					<Bttn type="submit">Registrarme</Bttn>
+					<Button type="submit">Registrarme</Button>
 				</Form>
 			)}
 		</Formik>

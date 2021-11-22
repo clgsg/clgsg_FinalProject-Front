@@ -1,13 +1,13 @@
 import {
+	Button,
 	Table,
 	Thead,
 	Tbody,
-	// Tfoot,
 	Tr,
 	Th,
 	Td,
 } from "@chakra-ui/react";
-import Bttn from "components/Button";
+;
 
 const TSuggestedGames = () => {
 	return (
@@ -35,24 +35,10 @@ const TSuggestedGames = () => {
 						<Td>No</Td>
 						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Bttn text={"Apuntarme"} />
+							<Button text={"Apuntarme"} />
 						</Td>
 						<Td>
-							<Bttn text={"Ver detalles"} />
-						</Td>
-					</Tr>
-					<Tr>
-						<Td>Baloncesto</Td>
-						<Td>21-12-2021</Td>
-						<Td>12:00</Td>
-						<Td>Masculino</Td>
-						<Td>No</Td>
-						<Td>IDB La Vaguada</Td>
-						<Td>
-							<Bttn text={"Apuntarme"} />
-						</Td>
-						<Td>
-							<Bttn text={"Ver detalles"} />
+							<Button text={"Ver detalles"} />
 						</Td>
 					</Tr>
 					<Tr>
@@ -63,10 +49,24 @@ const TSuggestedGames = () => {
 						<Td>No</Td>
 						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Bttn text={"Apuntarme"} />
+							<Button text={"Apuntarme"} />
 						</Td>
 						<Td>
-							<Bttn text={"Ver detalles"} />
+							<Button text={"Ver detalles"} />
+						</Td>
+					</Tr>
+					<Tr>
+						<Td>Baloncesto</Td>
+						<Td>21-12-2021</Td>
+						<Td>12:00</Td>
+						<Td>Masculino</Td>
+						<Td>No</Td>
+						<Td>IDB La Vaguada</Td>
+						<Td>
+							<Button text={"Apuntarme"} />
+						</Td>
+						<Td>
+							<Button text={"Ver detalles"} />
 						</Td>
 					</Tr>
 					<Tr>
@@ -77,10 +77,10 @@ const TSuggestedGames = () => {
 						<Td>Sí</Td>
 						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Bttn text={"Apuntarme"} />
+							<Button text={"Apuntarme"} />
 						</Td>
 						<Td>
-							<Bttn text={"Ver detalles"} />
+							<Button text={"Ver detalles"} />
 						</Td>
 					</Tr>
 				</Tbody>

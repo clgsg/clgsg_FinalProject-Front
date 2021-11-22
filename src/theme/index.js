@@ -4,13 +4,12 @@
 // import "@fontsource/raleway/600.css";
 // import "@fontsource/source-code-pro/200.css";
 // import "@fontsource/source-code-pro/600.css";
-import {ButtonStyles as Button} from "./ButtonStyles";
 import { extendTheme, theme as base } from "@chakra-ui/react";
 const customTheme = extendTheme({
 	config: {
 		initialColorMode: "light",
-		useSystemColorMode: false,		/* 'true' si queremos que el usuario elija modo claro u oscuro*/
-		},
+		useSystemColorMode: false /* 'true' si queremos que el usuario elija modo claro u oscuro*/,
+	},
 	colors: {
 		brand: {
 			main: "teal",
@@ -28,9 +27,32 @@ const customTheme = extendTheme({
 		mono: `Source Code Pro, ${base.fonts?.mono}`,
 	},
 	components: {
-		Button,
-	}
-
+		Button: {
+			baseStyle: {
+				size: "sm",
+				bg: "teal.700",
+				color: "teal.300",
+				_hover: {
+					bg: "teal.300",
+					color: "teal.700",
+					transform: "scale(1.05)",
+				},
+			},
+			sizes: {},
+			variants: {
+				onDark: {
+					bg: "teal.300",
+					color: "teal.700",
+					_hover: {
+						bg: "teal.700",
+						color: "teal.300",
+						transform: "scale(1.05)",
+					},
+				},
+			},
+			defaultProps: {},
+		},
+	},
 });
 
 export default customTheme;

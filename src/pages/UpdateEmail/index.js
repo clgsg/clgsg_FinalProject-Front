@@ -1,27 +1,26 @@
 
 import { Link } from "@chakra-ui/layout";
-import Bttn from "components/Button";
+import {Button, ButtonGroup} from "@chakra-ui/react";
 import UpdateEmailForm from "components/UpdateEmailForm";
 
 const updateEmail = () => {
-
-
 	return (
 		<>
 			<UpdateEmailForm />
-			<Bttn
-				className="CancelBttn"
-				text="Cancelar"
-				// onClick={}
-				to="profile"
-			/>
-			<Bttn
-				className="UpdateEmailBttn"
-				text="Confirmar"
-				// onClick={}
-				to="profile"
-			/>
-
+			<ButtonGroup>
+				<Button
+					className="CancelButton"
+					text="Cancelar"
+					// onClick={}
+					to="profile"
+				/>
+				<Button
+					className="UpdateEmailButton"
+					text="Confirmar"
+					// onClick={}
+					to="profile"
+				/>
+			</ButtonGroup>
 			<h3>
 				¿Aún no tienes cuenta? ¡Regístrate
 				<Link href={`signup`}>aquí!</Link>

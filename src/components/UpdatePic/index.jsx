@@ -1,4 +1,4 @@
-import Bttn from "components/Button";
+;
 
 
 function UpdatePasswordForm() {
@@ -6,7 +6,7 @@ function UpdatePasswordForm() {
 		<>
 			<h2>Selecciona tu nueva imagen</h2>
 
-			<Bttn type="Submit" text={"Actualizar mi foto de perfil"}></Bttn>
+			<Button type="Submit" text={"Actualizar mi foto de perfil"}/>
 		</>
 	);
 }

@@ -9,3 +9,18 @@ export const getAllGames =
 			return false;
 		}
 	};
+
+export const createGame =
+	({ get }) =>
+	async () => {
+		try {
+			return (await get(`/games/new`))
+				.data;
+		} catch (error) {
+			console.info(
+				"⛔ Error at createGame service: ",
+				error.message
+			);
+			return false;
+		}
+	};

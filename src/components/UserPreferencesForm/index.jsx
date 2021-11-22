@@ -1,4 +1,4 @@
-import Bttn from "components/Button";
+;
 import {MultiCheckbox} from "components/Forms/elements/MultiCheckbox"
 
 
@@ -12,8 +12,8 @@ import {MultiCheckbox} from "components/Forms/elements/MultiCheckbox"
 			{/* <RadioButton></RadioButton> */}
 			<h2>Hombres/Mujeres/Mixto</h2>
 			<MultiCheckbox></MultiCheckbox>
-			<Bttn text={"Cancelar"}/>
-			<Bttn text={"Confirmar"}/>
+			<Button text={"Cancelar"}/>
+			<Button text={"Confirmar"}/>
 		</>
 	);
 }

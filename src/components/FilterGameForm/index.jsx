@@ -1,5 +1,5 @@
-import { Select, Stack, Checkbox, CheckboxGroup, HStack } from "@chakra-ui/react"
-import Bttn from "components/Bttn"
+import { Select, Stack, Checkbox, CheckboxGroup, HStack, ButtonGroup, Button, theme } from "@chakra-ui/react"
+
 import Calendar from "components/DateAndTime/Calendar.jsx"
 
 function FilterGameForm() {
@@ -54,14 +54,10 @@ function FilterGameForm() {
 				<option value="option17">IDB Ambulatorio (El Paraíso)</option>
 				<option value="option18">IDB Americio</option>
 			</Select>
-			<Stack spacing={10} direction="row">
-				<Bttn className="ClearBttn" text="Borrar" to=""></Bttn>
-				<Bttn
-					className="FilterBttn"
-					text="Buscar"
-					to="browseGamesResults"
-				></Bttn>
-			</Stack>
+			<ButtonGroup spacing={10}>
+				<Button theme="theme" text="Borrar" to="" />
+				<Button theme="theme" text="Buscar" to="/games/browse/results" />
+			</ButtonGroup>
 		</Stack>
 	);
 }

@@ -1,5 +1,7 @@
 
 import {
+	Button,
+	ButtonGroup,
 	Table,
 	Thead,
 	Tbody,
@@ -8,7 +10,7 @@ import {
 	Th,
 	Td,
 } from "@chakra-ui/react";
-import Bttn from "components/Button";
+;
 
 const TBrowseGamesResults = () => {
 
@@ -25,7 +27,6 @@ const TBrowseGamesResults = () => {
 						<Th>Adaptado</Th>
 						<Th>Lugar</Th>
 						<Th></Th>
-						<Th></Th>
 					</Tr>
 				</Thead>
 				<Tbody>
@@ -37,24 +38,10 @@ const TBrowseGamesResults = () => {
 						<Td>No</Td>
 						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Bttn text={"Apuntarme"} />
-						</Td>
-						<Td>
-							<Bttn text={"Ver detalles"} />
-						</Td>
-					</Tr>
-					<Tr>
-						<Td>Baloncesto</Td>
-						<Td>21-12-2021</Td>
-						<Td>12:00</Td>
-						<Td>Masculino</Td>
-						<Td>No</Td>
-						<Td>IDB La Vaguada</Td>
-						<Td>
-							<Bttn text={"Apuntarme"} />
-						</Td>
-						<Td>
-							<Bttn text={"Ver detalles"} />
+							<ButtonGroup>
+								<Button text={"Apuntarme"} />
+								<Button text={"Ver detalles"} />
+							</ButtonGroup>
 						</Td>
 					</Tr>
 					<Tr>
@@ -65,10 +52,24 @@ const TBrowseGamesResults = () => {
 						<Td>No</Td>
 						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Bttn text={"Apuntarme"} />
+							<ButtonGroup>
+								<Button text={"Apuntarme"} />
+								<Button text={"Ver detalles"} />
+							</ButtonGroup>
 						</Td>
+					</Tr>
+					<Tr>
+						<Td>Baloncesto</Td>
+						<Td>21-12-2021</Td>
+						<Td>12:00</Td>
+						<Td>Masculino</Td>
+						<Td>No</Td>
+						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Bttn text={"Ver detalles"} />
+							<ButtonGroup>
+								<Button text={"Apuntarme"} />
+								<Button text={"Ver detalles"} />
+							</ButtonGroup>
 						</Td>
 					</Tr>
 					<Tr>
@@ -79,10 +80,10 @@ const TBrowseGamesResults = () => {
 						<Td>Sí</Td>
 						<Td>IDB La Vaguada</Td>
 						<Td>
-							<Bttn text={"Apuntarme"} />
-						</Td>
-						<Td>
-							<Bttn text={"Ver detalles"} />
+							<ButtonGroup>
+								<Button text={"Apuntarme"} />
+								<Button text={"Ver detalles"} />
+							</ButtonGroup>
 						</Td>
 					</Tr>
 				</Tbody>

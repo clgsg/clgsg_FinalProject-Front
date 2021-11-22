@@ -1,5 +1,8 @@
 import axios from "axios";
-import { getAllGames } from "./games";
+import { login, signup, updateEmail, updatePassword} from "./auth"
+import { getAllGames, createGame } from "./games";
+import {getParticipants, addParticipant} from "./participants"
+import { getUsersGames, getUserData } from "./users"
 
 const client = axios.create({
 	baseURL: process.env.REACT_APP_BACK_URL,
@@ -7,9 +10,33 @@ const client = axios.create({
 		"Content-Type": "application/json",
 	},
 });
+
+const auth ={
+	login: login(client),
+	signup: signup(client),
+	updateEmail: updateEmail(client),
+	updatePassword: updatePassword(client),
+}
+
 const games = {
 	getGames: getAllGames(client),
-
+	createGames: createGame(client),
 };
 
-export { games };
+const participants = {
+	getParticipants: getParticipants(client),
+	addParticipant: addParticipant(client),
+}
+
+
+const users = {
+	getUsersGames: getUsersGames(client),
+	getUserData: getUserData(client),
+}
+
+export {
+	auth,
+	games,
+	participants,
+	users,
+};

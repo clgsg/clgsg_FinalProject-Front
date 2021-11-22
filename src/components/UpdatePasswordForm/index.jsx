@@ -1,4 +1,4 @@
-import Bttn from "components/Button";
+;
 import { Formik, Form, Field } from "formik";
 
 import * as yup from "yup";
@@ -48,8 +48,8 @@ export const UpdatePasswordForm = () => (
 					{errors.confirmPassword && touched.confirmPassword ? (
 						<div>{errors.confirmPassword}</div>
 					) : null}
-					<Bttn>Cancelar</Bttn>
-					<Bttn type="submit">Confirmar</Bttn>
+					<Button>Cancelar</Button>
+					<Button type="submit">Confirmar</Button>
 				</Form>
 			)}
 		</Formik>
