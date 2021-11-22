@@ -5,7 +5,8 @@ import {getParticipants, addParticipant} from "./participants"
 import { getUsersGames, getUserData } from "./users"
 
 const client = axios.create({
-	baseURL: process.env.REACT_APP_BACK_URL,
+	baseURL: "http://localhost:3000/",
+	// baseURL: process.env.REACT_APP_BACK_URL,
 	headers: {
 		"Content-Type": "application/json",
 	},

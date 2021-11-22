@@ -1,6 +1,6 @@
-import {Button} from "@chakra-ui/react";
+import {Button, VStack} from "@chakra-ui/react";
 import { Formik, Form, Field } from "formik";
-
+import { login } from "services/auth";
 import * as yup from "yup";
 import YupPassword from "yup-password";
 YupPassword(yup);
@@ -11,7 +11,7 @@ const schema = yup.object().shape({
 });
 
 const LoginForm = () => (
-	<div>
+	<VStack w={80} h="full" p={8} spacing={8} alignItems="flex-start">
 		<h1>Acceder</h1>
 		<Formik
 			initialValues={{
@@ -33,11 +33,11 @@ const LoginForm = () => (
 					{errors.password && touched.password ? (
 						<div>{errors.password}</div>
 					) : null}
-					<Button type="submit">Acceder</Button>
+					<Button type="submit" onClick={login}>Acceder</Button>
 				</Form>
 			)}
 		</Formik>
-	</div>
+	</VStack>
 );
 
 export default LoginForm;

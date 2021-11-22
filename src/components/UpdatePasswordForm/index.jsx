@@ -1,5 +1,6 @@
-;
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, resetForm } from "formik";
+import { Button } from "@chakra-ui/react";
+import { updatePassword } from "services/auth";
 
 import * as yup from "yup";
 import YupPassword from "yup-password";
@@ -48,8 +49,8 @@ export const UpdatePasswordForm = () => (
 					{errors.confirmPassword && touched.confirmPassword ? (
 						<div>{errors.confirmPassword}</div>
 					) : null}
-					<Button>Cancelar</Button>
-					<Button type="submit">Confirmar</Button>
+					<Button type="reset" onClick={resetForm}>Cancelar</Button>
+					<Button type="submit" onClick={updatePassword}>Confirmar</Button>
 				</Form>
 			)}
 		</Formik>

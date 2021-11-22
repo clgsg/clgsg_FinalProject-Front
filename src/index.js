@@ -6,16 +6,14 @@ import { ChakraProvider, CSSReset, ColorModeScript, Flex} from "@chakra-ui/react
 import theme from "./theme"
 import "theme/styles.css"
 
-// import routes from "routes";
 
 import App from "pages/App"
 import TopHeader from "components/TopHeader";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<ColorModeScript />
 		<ChakraProvider theme={theme}>
-			import
+		<ColorModeScript>
 			<CSSReset />
 				<TopHeader />
 					<BrowserRouter>
@@ -29,6 +27,7 @@ ReactDOM.render(
 						</Switch>
 						</Flex>
 					</BrowserRouter>
+			</ColorModeScript>
 		</ChakraProvider>
 	</React.StrictMode>,
 	document.getElementById("root")

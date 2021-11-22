@@ -1,5 +1,6 @@
 import {Button} from "@chakra-ui/react";
 import { Formik, Form, Field, useField } from "formik";
+import { signup } from "services/auth";
 
 import * as yup from "yup";
 import YupPassword from "yup-password";
@@ -67,7 +68,7 @@ const SignupForm = () => (
 				<MyCheckbox name="acceptedTerms">
 					Acepto las condiciones de uso y el tratamiento de mis datos
 				</MyCheckbox>
-					<Button type="submit">Registrarme</Button>
+					<Button type="submit" onClick={signup}>Registrarme</Button>
 				</Form>
 			)}
 		</Formik>

@@ -1,14 +1,27 @@
-import { ButtonGroup, Button, useColorModeValue, Box, Flex, Stack, Text } from "@chakra-ui/react";
-
+import { useHistory } from "react-router-dom";
+import {
+	ButtonGroup,
+	Button,
+	useColorModeValue,
+	Box,
+	Flex,
+	Stack,
+	Text,
+} from "@chakra-ui/react";
 
 export default function TopHeader() {
+	const history = useHistory();
+
 	return (
-		<Box bg={useColorModeValue("cyan.700")} px={4} h='20vh' w='100vw'>
+		<Box bg={useColorModeValue("cyan.700")} px={4} h="20vh" w="100vw">
 			<Flex h={20} alignItems={"center"} justifyContent={"center"}>
 				<Flex alignItems={"center"}>
 					<Stack direction={"column"} spacing={2}>
 						<Box>
-							<Text fontFamily='Road Rage' fontSize={{base: '20vh', md: '30vh'}}>
+							<Text
+								fontFamily="Road Rage"
+								fontSize={{ base: "20vh", md: "30vh" }}
+							>
 								megustalapachanga
 							</Text>
 						</Box>
@@ -19,7 +32,7 @@ export default function TopHeader() {
 								borderColor="white"
 								borderWidth="2px"
 								color="teal.700"
-								to="/auth/login"
+								onClick={() => history.push("/home")}
 							>
 								Acceder
 							</Button>

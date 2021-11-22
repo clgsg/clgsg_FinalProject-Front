@@ -1,4 +1,5 @@
 import Homepage from './homepage/index.js'
+import {withRouter} from 'react-router-dom';
 
 
 function App({ Component, pageProps }) {
@@ -10,4 +11,4 @@ function App({ Component, pageProps }) {
   )
 }
 
-export default App
+export default withRouter(App)
