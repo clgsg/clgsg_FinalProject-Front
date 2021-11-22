@@ -1,17 +1,16 @@
-import { ButtonGroup, Button, useColorModeValue, Box, Flex, Stack } from "@chakra-ui/react";
+import { ButtonGroup, Button, useColorModeValue, Box, Flex, Stack, Text } from "@chakra-ui/react";
 
 
 export default function TopHeader() {
 	return (
-		<Box bg={useColorModeValue("teal")} px={4}>
-			<Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+		<Box bg={useColorModeValue("cyan.700")} px={4} h='20vh' w='100vw'>
+			<Flex h={20} alignItems={"center"} justifyContent={"center"}>
 				<Flex alignItems={"center"}>
-					<Stack direction={"row"} spacing={7}>
+					<Stack direction={"column"} spacing={2}>
 						<Box>
-							<img
-								src="./headerimg.tiff"
-								alt="Logo de megustalapachanga"
-							/>
+							<Text fontFamily='Road Rage' fontSize={{base: '20vh', md: '30vh'}}>
+								megustalapachanga
+							</Text>
 						</Box>
 						<ButtonGroup spacing={4}>
 							<Button
