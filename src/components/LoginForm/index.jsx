@@ -1,9 +1,14 @@
-import {Button, VStack} from "@chakra-ui/react";
+import Button from "components/Button";
 import { Formik, Form, Field } from "formik";
 import { login } from "services/auth";
+import "components/index.scss";
+
+
 import * as yup from "yup";
 import YupPassword from "yup-password";
 YupPassword(yup);
+
+
 
 const schema = yup.object().shape({
 	username_email: yup.string().required("Campo obligatorio"),
@@ -11,8 +16,7 @@ const schema = yup.object().shape({
 });
 
 const LoginForm = () => (
-	<VStack w={80} h="full" p={8} spacing={8} alignItems="flex-start">
-		<h1>Acceder</h1>
+
 		<Formik
 			initialValues={{
 				username_email: "",
@@ -37,7 +41,6 @@ const LoginForm = () => (
 				</Form>
 			)}
 		</Formik>
-	</VStack>
 );
 
 export default LoginForm;

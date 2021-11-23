@@ -1,56 +1,39 @@
 import { useHistory } from "react-router-dom";
-import {
-	ButtonGroup,
-	Button,
-	useColorModeValue,
-	Box,
-	Flex,
-	Stack,
-	Text,
-} from "@chakra-ui/react";
+import Button from "components/Button";
+import "components/index.scss";
+
 
 export default function TopHeader() {
 	const history = useHistory();
 
 	return (
-		<Box bg={useColorModeValue("cyan.700")} px={4} h="20vh" w="100vw">
-			<Flex h={20} alignItems={"center"} justifyContent={"center"}>
-				<Flex alignItems={"center"}>
-					<Stack direction={"column"} spacing={2}>
-						<Box>
-							<Text
+		<div bg={"cyan.700"} px={4} h="20vh" w="100vw">
+			<div h={20} alignItems={"center"} justifyContent={"center"}>
+				<div alignItems={"center"}>
+					<div direction={"column"} spacing={2}>
+						<div>
+							<div
 								fontFamily="Road Rage"
 								fontSize={{ base: "20vh", md: "30vh" }}
 							>
 								megustalapachanga
-							</Text>
-						</Box>
-						<ButtonGroup spacing={4}>
-							<Button
-								size="sm"
-								bg="teal.100"
-								borderColor="white"
-								borderWidth="2px"
-								color="teal.700"
-								onClick={() => history.push("/home")}
-							>
+								<img
+									src="./headerimg.tiff"
+									alt="Balones y pelotas"
+									width="100px"
+									height="100px"
+								/>
+							</div>
+						</div>
+						<div spacing={4}>
+							<Button onClick={() => history.push("/home")}>
 								Acceder
 							</Button>
-							<Button
-								size="sm"
-								bg="teal.100"
-								borderColor="white"
-								borderWidth="2px"
-								color="teal.700"
-								to="/auth/signup"
-							>
-								{" "}
-								Quiero registrarme
-							</Button>
-						</ButtonGroup>
-					</Stack>
-				</Flex>
-			</Flex>
-		</Box>
+							<Button> Quiero registrarme</Button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	);
 }

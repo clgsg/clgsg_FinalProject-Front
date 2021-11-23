@@ -1,4 +1,5 @@
-;
+import Button from "components/Button";
+import "components/index.scss";
 import { Formik, Form, Field } from "formik";
 
 import * as yup from "yup";

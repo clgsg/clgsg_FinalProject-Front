@@ -1,20 +1,18 @@
-import { Link } from "@chakra-ui/layout";
-import { Button } from "@chakra-ui/react";
+import Button from "components/Button";
+import "components/index.scss";
 import ForgotPasswordForm from "components/ForgotPasswordForm";
 
-
 const forgotPassword = () => {
-
 	return (
 		<>
 			<ForgotPasswordForm />
 			<Button text={"Enviar email"} />
 			<h3>
 				¿Aún no tienes cuenta? ¡Regístrate
-				<Link href={`register`}>aquí!</Link>
+				<div href={`register`}>aquí!</div>
 			</h3>
 		</>
 	);
-}
+};
 
-export default forgotPassword
+export default forgotPassword;

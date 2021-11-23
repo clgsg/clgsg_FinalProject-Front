@@ -1,5 +1,6 @@
 import { Formik, Form, Field, resetForm } from "formik";
-import { Button } from "@chakra-ui/react";
+import Button from "components/Button";
+import "components/index.scss";
 import { updatePassword } from "services/auth";
 
 import * as yup from "yup";

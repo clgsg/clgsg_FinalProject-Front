@@ -1,4 +1,5 @@
-import {Button} from "@chakra-ui/react";
+import Button from "components/Button";
+import "components/index.scss";
 import { Formik, Form, Field, useField } from "formik";
 import { signup } from "services/auth";
 
@@ -20,7 +21,6 @@ const schema = yup.object().shape({
 		.max(15, "¡No tan larga!")
 		.required("Campo obligatorio"),
 });
-
 
 const MyCheckbox = ({ children, ...props }) => {
 	const [field, meta] = useField({ ...props, type: "checkbox" });
@@ -65,14 +65,17 @@ const SignupForm = () => (
 					{errors.password && touched.password ? (
 						<div>{errors.password}</div>
 					) : null}
-				<MyCheckbox name="acceptedTerms">
-					Acepto las condiciones de uso y el tratamiento de mis datos
-				</MyCheckbox>
-					<Button type="submit" onClick={signup}>Registrarme</Button>
+					<MyCheckbox name="acceptedTerms">
+						Acepto las condiciones de uso y el tratamiento de mis
+						datos
+					</MyCheckbox>
+					<Button type="submit" onClick={signup}>
+						Registrarme
+					</Button>
 				</Form>
 			)}
 		</Formik>
 	</div>
 );
 
-export default SignupForm
+export default SignupForm;

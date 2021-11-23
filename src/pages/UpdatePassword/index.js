@@ -1,5 +1,5 @@
-import { Link } from "@chakra-ui/layout";
-;
+import Button from "components/Button";
+import "components/index.scss";
 import UpdatePasswordForm from "components/Forms/UpdatePasswordForm";
 
 const updatePassword = () => {
@@ -9,7 +9,7 @@ const updatePassword = () => {
 			<Button text={"Enviar contraseña"} />
 			<h3>
 				¿Aún no tienes cuenta? ¡Regístrate
-				<Link href={`register`}>aquí!</Link>
+				<div href={`register`}>aquí!</div>
 			</h3>
 		</>
 	);

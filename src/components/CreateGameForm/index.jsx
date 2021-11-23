@@ -1,11 +1,12 @@
-import { Select, ButtonGroup, Button } from "@chakra-ui/react";
+import Button from "components/Button";
+import "components/index.scss";
 import Calendar from "components/DateAndTime/Calendar.jsx";
 
 function FilterGameForm() {
 	return (
 		<>
 			<h2>Qué</h2>
-			<Select
+			<div
 				variant="outline"
 				size="sm"
 				borderColor="teal"
@@ -19,7 +20,7 @@ function FilterGameForm() {
 				<option value="option6">Pádel</option>
 				<option value="option7">Tenis</option>
 				<option value="option8">Otro</option>
-			</Select>
+			</div>
 			<h2>Fecha</h2>
 			<Calendar></Calendar>
 			<h2>A partir de las</h2>
@@ -27,7 +28,7 @@ function FilterGameForm() {
 
 			<h2>Hombres/Mujeres/Mixto</h2>
 
-			<Select
+			<div
 				variant="outline"
 				size="sm"
 				borderColor="teal"
@@ -51,15 +52,15 @@ function FilterGameForm() {
 				<option value="option16">IDB Almudena</option>
 				<option value="option17">IDB Ambulatorio (El Paraíso)</option>
 				<option value="option18">IDB Americio</option>
-			</Select>
-			<ButtonGroup spacing={4}>
-				<Button className="ClearButton" text="Borrar"/>
+			</div>
+			<div spacing={4}>
+				<Button className="ClearButton" text="Borrar" />
 				<Button
 					className="FilterButton"
 					text="Buscar"
 					to="browseGamesResults"
 				/>
-			</ButtonGroup>
+			</div>
 		</>
 	);
 }

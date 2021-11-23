@@ -1,4 +1,5 @@
-import { ButtonGroup, Button } from "@chakra-ui/react";
+import Button from "components/Button";
+import "components/index.scss";
 import { Formik, Form, Field } from "formik";
 
 import * as yup from "yup";
@@ -48,10 +49,10 @@ const ForgotPasswordForm = () => (
 					{errors.password && touched.password ? (
 						<div>{errors.password}</div>
 					) : null}
-					<ButtonGroup spacing={4}>
+					<div spacing={4}>
 						<Button type="reset">Cancelar</Button>
 						<Button type="submit">Confirmar</Button>
-					</ButtonGroup>
+					</div>
 				</Form>
 			)}
 		</Formik>

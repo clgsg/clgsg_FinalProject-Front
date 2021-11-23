@@ -1,13 +1,12 @@
-
-import { Link } from "@chakra-ui/layout";
-import {Button, ButtonGroup} from "@chakra-ui/react";
+import Button from "components/Button";
+import "components/index.scss";
 import UpdateEmailForm from "components/UpdateEmailForm";
 
 const updateEmail = () => {
 	return (
 		<>
 			<UpdateEmailForm />
-			<ButtonGroup>
+			<div>
 				<Button
 					className="CancelButton"
 					text="Cancelar"
@@ -20,10 +19,10 @@ const updateEmail = () => {
 					// onClick={}
 					to="profile"
 				/>
-			</ButtonGroup>
+			</div>
 			<h3>
 				¿Aún no tienes cuenta? ¡Regístrate
-				<Link href={`signup`}>aquí!</Link>
+				<div href={`signup`}>aquí!</div>
 			</h3>
 		</>
 	);

@@ -1,16 +1,16 @@
 import TUpcomingGames from "../../components/Tables/TUpcomingGames";
-import { Button, Box, Stack} from "@chakra-ui/react";
-// import { Theme } from "@chakra-ui/theme";
+import Button from "components/Button";
+import "components/index.scss";
 
 const Homepage = () => {
 	return (
-		<Stack>
+		<div>
 			<h1> Esta es la página de inicio </h1>
-			<Box>
+			<div>
 				<h2> Próximas pachangas:</h2>
 				<TUpcomingGames />
-			</Box>
-			<Box>
+			</div>
+			<div>
 				<p>¿Ya tienes cuenta?</p>
 				<Button className="LoginButton"
 					text="Acceder"
@@ -18,8 +18,8 @@ const Homepage = () => {
 
 				<p>¿Aún no tienes cuenta?</p>
 				<Button>Registrarse</Button>
-			</Box>
-		</Stack>
+			</div>
+		</div>
 	);
 }
 
