@@ -1,5 +1,3 @@
-// import { Select, Stack, Checkbox, CheckboxGroup, HStack, ButtonGroup, Button, theme } from "@chakra-ui/react"
-
 // import Calendar from "components/DateAndTime/Calendar.jsx"
 
 // function FilterGameForm() {

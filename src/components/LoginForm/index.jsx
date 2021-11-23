@@ -15,32 +15,37 @@ const schema = yup.object().shape({
 	password: yup.string().password("Contraseña no válida"),
 });
 
-const LoginForm = () => (
-
-		<Formik
-			initialValues={{
-				username_email: "",
-				password: "",
-			}}
-			validationSchema={schema}
-			onSubmit={(values) => {
-				console.log("Login form data:", values);
-			}}
-		>
-			{({ errors, touched }) => (
-				<Form>
-					<Field name="username_email" />
-					{errors.username_email && touched.username_email ? (
-						<div>{errors.username_email}</div>
-					) : null}
-					<Field name="password" type="password" />
-					{errors.password && touched.password ? (
-						<div>{errors.password}</div>
-					) : null}
-					<Button type="submit" onClick={login}>Acceder</Button>
-				</Form>
-			)}
-		</Formik>
-);
+const LoginForm = () => {
+		return (
+			<Formik
+				initialValues={{
+					username_email: "",
+					password: "",
+				}}
+				validationSchema={schema}
+				onSubmit={(values) => {
+					console.log("Login form data:", values);
+				}}
+			>
+				{({ errors, touched }) => (
+					<Form>
+						<Field name="username_email" type="email" placeholder="Usuario o email"/>
+						{errors.username_email && touched.username_email ? (
+							<div>{errors.username_email}</div>
+						) : null}
+						<Field name="password" type="password" placeholder="Contraseña"/>
+						{errors.password && touched.password ? (
+							<div>{errors.password}</div>
+						) : null}
+						<Button
+							type="submit"
+							text="Confirmar"
+							onSubmit={login}
+						>
+						</Button>
+					</Form>
+				)}
+			</Formik>)
+};
 
 export default LoginForm;

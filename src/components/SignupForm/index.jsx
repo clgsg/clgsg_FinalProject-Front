@@ -1,3 +1,4 @@
+import { Box } from "@mui/system";
 import Button from "components/Button";
 import "components/index.scss";
 import { Formik, Form, Field, useField } from "formik";
@@ -53,25 +54,25 @@ const SignupForm = () => (
 		>
 			{({ errors, touched }) => (
 				<Form>
-					<Field name="username" />
-					{errors.username && touched.username ? (
-						<div>{errors.username}</div>
-					) : null}
-					<Field name="email" type="email" />
-					{errors.email && touched.email ? (
-						<div>{errors.email}</div>
-					) : null}
-					<Field name="password" type="password" />
-					{errors.password && touched.password ? (
-						<div>{errors.password}</div>
-					) : null}
+					<Box className="forms">
+						<Field name="username" placeholder="Usuario"/>
+						{errors.username && touched.username ? (
+							<div>{errors.username}</div>
+						) : null}
+						<Field name="email" type="email" />
+						{errors.email && touched.email ? (
+							<div>{errors.email}</div>
+						) : null}
+						<Field name="password" type="password" />
+						{errors.password && touched.password ? (
+							<div>{errors.password}</div>
+							) : null}
+					</Box>
 					<MyCheckbox name="acceptedTerms">
 						Acepto las condiciones de uso y el tratamiento de mis
 						datos
 					</MyCheckbox>
-					<Button type="submit" onClick={signup}>
-						Registrarme
-					</Button>
+					<Button type="submit" onClick={signup} text="Registrarme" />
 				</Form>
 			)}
 		</Formik>

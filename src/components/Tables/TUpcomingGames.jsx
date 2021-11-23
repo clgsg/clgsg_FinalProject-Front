@@ -1,71 +1,46 @@
-import {
-	Table,
-	Thead,
-	Tbody,
-	// Tfoot,
-	Tr,
-	Th,
-	Td,
-} from "@chakra-ui/react";
+import {useState, useEffect} from 'react'
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import {games} from "services";
+
 
 const TUpcomingGames = () => {
+	const [data, dataSet] = useState([]);
+
+	useEffect(() => {
+		async function fetchMyAPI() {
+			const response = await games.getUpcomingGames()
+			dataSet(response.data.data);
+		}
+
+		fetchMyAPI();
+	}, []);
 	return (
 		<>
-			{/* <h2>Próximas pachangas</h2> */}
-			<Table variant="striped" colorScheme="teal">
-				<Thead>
-					<Tr>
-						<Th>Deporte</Th>
-						<Th>Fecha</Th>
-						<Th>Hora</Th>
-						<Th>Masc./Fem.</Th>
-						<Th>Adaptado</Th>
-					</Tr>
-				</Thead>
-				<Tbody>
-					<Tr>
-						<Td>Baloncesto</Td>
-						<Td>21-12-2021</Td>
-						<Td>12:00</Td>
-						<Td>Masculino</Td>
-						<Td>No</Td>
-
-					</Tr>
-					<Tr>
-						<Td>Baloncesto</Td>
-						<Td>21-12-2021</Td>
-						<Td>12:00</Td>
-						<Td>Masculino</Td>
-						<Td>No</Td>
-
-					</Tr>
-					<Tr>
-						<Td>Baloncesto</Td>
-						<Td>21-12-2021</Td>
-						<Td>12:00</Td>
-						<Td>Masculino</Td>
-						<Td>No</Td>
-
-					</Tr>
-					<Tr>
-						<Td>3x3</Td>
-						<Td>26-12-2021</Td>
-						<Td>12:00</Td>
-						<Td>Masculino</Td>
-						<Td>Sí</Td>
-
-					</Tr>
-				</Tbody>
-				{/* <Tfoot>
-            <Tr>
-              <Th>To convert</Th>
-              <Th>into</Th>
-              <Th>multiply by</Th>
-            </Tr>
-          </Tfoot> */}
+			<Table>
+				<TableHead>
+					<TableRow>
+						<th>Deporte</th>
+						<th>Fecha</th>
+						<th>Hora</th>
+					</TableRow>
+				</TableHead>
+				<TableBody>
+					{data && data.map((trx) => (
+							<TableRow>
+								<TableCell>{trx.sport}</TableCell>
+								<TableCell>{trx.game_date}</TableCell>
+								<TableCell>{trx.game_time}</TableCell>
+							</TableRow>
+						))}
+				</TableBody>
 			</Table>
 		</>
 	);
 };
+
 
 export default TUpcomingGames;

@@ -1,4 +1,4 @@
-import { Link } from "@chakra-ui/layout";
+import { Link } from "react-router-dom";
 import SignupForm from "components/SignupForm";
 
 const SignupPage = () => {

@@ -1,29 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Glory:ital,wght@0,100;0,500;0,800;1,100;1,500;1,800&family=Righteous&display=swap');
-/* font-family: 'Dancing Script', cursive;
-font-family: 'Glory', sans-serif;
-font-family: 'Righteous', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 
-$font1: 'Dancing Script';
-$font2: 'Glory';
-$font3: 'Righteous';
+$font1: 'Roboto';
+$header_font: 'Road Rage';
 
 
-$yellow1: rgb(255, 254, 208);
-$yellow2: rgb(243, 243, 102);
-$yellow3: yellow;
-$coffee: rgb(46, 41, 38);
-$choco: rgb(117, 106, 97);
+$main: teal;
+$mainB: rgb(62, 211, 211);
+$secondary: rgb(252, 248, 248);
+$secondaryB: rgb(129, 129, 129);
+$choco: rgb(77, 70, 65);
 
 
 body {
-	background-color: $yellow1;
+	background-color: $secondary;
 	display: flex;
 	justify-content: center;
-	font-family: $font2;
+	font-family: 'Roboto';
 }
 
-.profile {
-	border: double 20px rgb(100, 100, 100);
+.header {
+	border: double 20px $mainB;
 	border-radius: 12px;
 	width: 90%;
 	padding: 30px;
@@ -35,8 +31,11 @@ body {
 }
 
 .smallCase {
-	font-family: $font2;
 	font-size: 0.8rem;
+}
+
+.forms {
+	flex: auto;
 }
 
 i{
@@ -44,39 +43,40 @@ i{
 	animation: fadein 2s 2ms;
 }
 i:hover, i:active, i:focus {
-  color: $coffee;
+  color: $main;
   cursor: pointer;
   transform: scale(1, 1.2);
 }
 
 
 button, button:visited {
-	color: $coffee;
-	background-color: $yellow2;
+	color: $secondary;
+	background-color: $main;
 	padding: 2px;
 	border-radius: 4px;
-	border: $coffee 1px solid;
+	border: $secondary 1px solid;
 }
 
 button:hover, button:focus, button:active {
-	color:$yellow2;
-	background-color: $coffee ;
+	color:$main;
+	background-color: $secondary ;
 	padding: 2px;
 	border-radius: 4px;
-	border: $yellow2 1px solid;
+	border: $main 1px solid;
 }
 
 h1 {
-	font-family: $font3;
-	font-size: 80px;
-	word-spacing: 0.3em;
+	font-family: $header_font;
+	font-size: 7vh;
+	// word-spacing: 0.3em;
 }
 
 header {
 	display: flex;
 	justify-content: center;
-	align-content: center;
-	background-color: $yellow3;
+	align-content: left;
+	flex-direction: row;
+	background-color: $secondary;
 	width: 95%;
 	height: auto;
 }
@@ -85,7 +85,11 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	background-color: $yellow3;
+	background-color: $secondaryB;
 	width: 95%;
 	height: auto;
+}
+
+thead {
+	border-bottom: solid 1.5px $mainB ;
 }

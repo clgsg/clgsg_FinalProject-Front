@@ -4,7 +4,7 @@ import "components/index.scss";
 
 const Homepage = () => {
 	return (
-		<div>
+		<div id="homepage">
 			<h1> Esta es la página de inicio </h1>
 			<div>
 				<h2> Próximas pachangas:</h2>
@@ -14,10 +14,9 @@ const Homepage = () => {
 				<p>¿Ya tienes cuenta?</p>
 				<Button className="LoginButton"
 					text="Acceder"
-					to="login">Acceder</Button>
-
+					to="login"/>
 				<p>¿Aún no tienes cuenta?</p>
-				<Button>Registrarse</Button>
+				<Button className="SignupButton" text="Registrarse" to="/signup"/>
 			</div>
 		</div>
 	);

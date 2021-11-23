@@ -54,12 +54,8 @@ function FilterGameForm() {
 				<option value="option18">IDB Americio</option>
 			</div>
 			<div spacing={4}>
-				<Button className="ClearButton" text="Borrar" />
-				<Button
-					className="FilterButton"
-					text="Buscar"
-					to="browseGamesResults"
-				/>
+				<Button text="Borrar" />
+				<Button	text="Buscar"/>
 			</div>
 		</>
 	);

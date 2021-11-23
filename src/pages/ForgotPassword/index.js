@@ -6,7 +6,7 @@ const forgotPassword = () => {
 	return (
 		<>
 			<ForgotPasswordForm />
-			<Button text={"Enviar email"} />
+			<Button text="Enviar email" />
 			<h3>
 				¿Aún no tienes cuenta? ¡Regístrate
 				<div href={`register`}>aquí!</div>

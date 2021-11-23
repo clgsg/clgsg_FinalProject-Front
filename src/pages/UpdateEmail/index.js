@@ -1,23 +1,24 @@
-import Button from "components/Button";
+// import { useHistory } from "react-router";
 import "components/index.scss";
+import Button from "components/Button";
 import UpdateEmailForm from "components/UpdateEmailForm";
 
 const updateEmail = () => {
+	// const history = useHistory();
+
 	return (
 		<>
 			<UpdateEmailForm />
 			<div>
 				<Button
-					className="CancelButton"
 					text="Cancelar"
-					// onClick={}
-					to="profile"
+					// onSubmit={() => history.push("/login")}
+					type="reset"
 				/>
 				<Button
-					className="UpdateEmailButton"
 					text="Confirmar"
 					// onClick={}
-					to="profile"
+					type="submit"
 				/>
 			</div>
 			<h3>
@@ -27,5 +28,4 @@ const updateEmail = () => {
 		</>
 	);
 };
-
-export default updateEmail;
+export default updateEmail

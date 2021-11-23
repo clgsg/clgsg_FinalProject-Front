@@ -1,90 +1,83 @@
-import {
-	Button,
-	ButtonGroup,
-	Link,
-	Table,
-	Tbody,
-	Tr,
-	Td,
-} from "@chakra-ui/react";
-;
+import Button from "components/Button";
+import "components/index.scss";
+import {Table, Link} from "react"
 
 const GameDetails = () => {
 	return (
 		<>
 			<h2>Qué</h2>
 			<Table variant="simple" colorScheme="teal">
-				<Tbody>
-					<Tr>
-						<Td>
+				<div>
+					<div>
+						<div>
 							<h2>Qué</h2>
-						</Td>
-						<Td>Baloncesto</Td>
-					</Tr>
-					<Tr>
-						<Td>
+						</div>
+						<div>Baloncesto</div>
+					</div>
+					<div>
+						<div>
 							<h2>Cuándo</h2>
-						</Td>
-						<Td>16 de diciembre del 2021 a las 17:30</Td>
-					</Tr>
-					<Tr>
-						<Td>
+						</div>
+						<div>16 de diciembre del 2021 a las 17:30</div>
+					</div>
+					<div>
+						<div>
 							<h2>Dónde</h2>
-						</Td>
-						<Td>
+						</div>
+						<div>
 							IDB Boston (
 							<Link href="#" color="teal.700">
 								Ver detalles
 							</Link>
 							)
-						</Td>
-					</Tr>
-					<Tr>
-						<Td>
+						</div>
+					</div>
+					<div>
+						<div>
 							<h2>Participantes</h2>
-						</Td>
-						<Td>
+						</div>
+						<div>
 							5 participantes (
 							<Link href="#" color="teal.700">
 								Ver detalles
 							</Link>
 							)
-						</Td>
-					</Tr>
-					<Tr>
-						<Td>
+						</div>
+					</div>
+					<div>
+						<div>
 							<h2>Nivel</h2>
-						</Td>
-						<Td>Intermedio</Td>
-					</Tr>
-					<Tr>
-						<Td>
+						</div>
+						<div>Intermedio</div>
+					</div>
+					<div>
+						<div>
 							<h2>Adaptado</h2>
-						</Td>
-						<Td>No</Td>
-					</Tr>
-					<Tr>
-						<Td>
+						</div>
+						<div>No</div>
+					</div>
+					<div>
+						<div>
 							<h2>Masc./Fem./Mixto</h2>
-						</Td>
-						<Td>Mixto</Td>
-					</Tr>
-					<Tr>
-						<Td>
+						</div>
+						<div>Mixto</div>
+					</div>
+					<div>
+						<div>
 							<h2>Comentario</h2>
-						</Td>
-						<Td>
+						</div>
+						<div>
 							Recuerdo que es obligatorio el uso de mascarillas.
-							Quedamos 15 minutos antes en la entrada del colegio
+							Quedamos 15 minutos antes en la endivada del colegio
 							que hay al lado.
-						</Td>
-					</Tr>
-				</Tbody>
+						</div>
+					</div>
+				</div>
 			</Table>
-			<ButtonGroup>
+			<div>
 			<Button text={"Volver"}/>
 			<Button text={"¡Me apunto!"} />
-			</ButtonGroup>
+			</div>
 		</>
 	);
 };
