@@ -21,11 +21,7 @@ const updateEmail = () => {
 					type="submit"
 				/>
 			</div>
-			<h3>
-				¿Aún no tienes cuenta? ¡Regístrate
-				<div href={`signup`}>aquí!</div>
-			</h3>
-		</>
+	</>
 	);
 };
 export default updateEmail
