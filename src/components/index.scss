@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Road+Rage&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 
 $font1: 'Roboto';
+$font2: 'Concert One';
 $header_font: 'Road Rage';
 
 
@@ -19,11 +20,14 @@ body {
 }
 
 .header {
-	border: double 20px $mainB;
-	border-radius: 12px;
+	border: solid 5px $mainB;
 	width: 90%;
 	padding: 30px;
 }
+
+// .headerTitle{
+// 	padding: 2px;
+// 	}
 
 .info {
 	border: solid 1px rgb(100, 100, 100);
@@ -39,7 +43,7 @@ body {
 }
 
 i{
-	color: $choco;
+	color: $main;
 	animation: fadein 2s 2ms;
 }
 i:hover, i:active, i:focus {
@@ -68,7 +72,17 @@ button:hover, button:focus, button:active {
 h1 {
 	font-family: $header_font;
 	font-size: 7vh;
-	// word-spacing: 0.3em;
+	word-spacing: 0.3em;
+}
+
+h2 {
+	font-family: $font2;
+	font-size: large;
+}
+
+h3 {
+	font-family: $font2;
+	font-size: small;
 }
 
 header {
@@ -77,19 +91,19 @@ header {
 	align-content: left;
 	flex-direction: row;
 	background-color: $secondary;
-	width: 95%;
+	width: 80%;
 	height: auto;
 }
 
-footer {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	background-color: $secondaryB;
-	width: 95%;
-	height: auto;
-}
 
 thead {
+	flex-direction: column;
 	border-bottom: solid 1.5px $mainB ;
+	padding: 2px;
+	justify-content: left;
+}
+
+th {
+	font-family: $font2;
+	padding: auto;
 }

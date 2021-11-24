@@ -5,10 +5,9 @@ const SignupPage = () => {
 	return (
 		<>
 			<SignupForm />
-			<h3>
-				¿Aún no tienes cuenta? ¡Regístrate
-				<Link href={`register`}>aquí!</Link>
-			</h3>
+			<p>
+				¿Ya tienes cuenta? <Link href="/login">Ve a la página de acceso</Link>
+			</p>
 		</>
 	);
 };

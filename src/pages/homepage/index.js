@@ -5,7 +5,7 @@ import "components/index.scss";
 const Homepage = () => {
 	return (
 		<div id="homepage">
-			<h1> Esta es la página de inicio </h1>
+			<p> Has llegado a megustalapachanga.com </p>
 			<div>
 				<h2> Próximas pachangas:</h2>
 				<TUpcomingGames />
@@ -16,7 +16,7 @@ const Homepage = () => {
 					text="Acceder"
 					to="login"/>
 				<p>¿Aún no tienes cuenta?</p>
-				<Button className="SignupButton" text="Registrarse" to="/signup"/>
+				<Button className="SignupButton" text="Registrarse" to="signup"/>
 			</div>
 		</div>
 	);

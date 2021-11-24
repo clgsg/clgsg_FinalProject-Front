@@ -44,8 +44,16 @@ const TUsersGames = () => {
 								<TableCell>{trx.adapted}</TableCell>
 								<TableCell>{trx.game_venue}</TableCell>
 								<TableCell>
-									<Button text="+info" to="/users/games"/>
-									<Button text="Apuntarme" to="users/games" onClick={{}}/>
+									<Button
+										text="+info"
+										to="users/games"
+										onClick={console.log("Más info: ", data.data)}
+									/>
+									<Button
+										text="Apuntarme"
+										to="users/games"
+										onClick={console.log("Apuntado: ", data.data)}
+									/>
 								</TableCell>
 							</TableRow>
 						))}

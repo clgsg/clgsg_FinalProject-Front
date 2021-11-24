@@ -53,7 +53,7 @@ const UpdateEmailForm = () => (
 						<div>{errors.password}</div>
 					) : null}
 					<Button>Cancelar</Button>
-					<Button type="submit">Confirmar</Button>
+					<Button type="submit" onSubmit={console.log("Nueva contraseña enviada")}>Confirmar</Button>
 				</Form>
 			)}
 		</Formik>
