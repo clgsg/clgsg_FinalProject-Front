@@ -1,4 +1,6 @@
-import Button from "components/Button"
+
+import Button from "components/Button";
+import "components/index.scss";
 import TBrowseGamesResults from "../../components/Tables/TBrowseGamesResults";
 
 const BrowseGamesResults = () => {
@@ -6,9 +8,10 @@ const BrowseGamesResults = () => {
 		<>
 			<h1>Resultado de la búsqueda</h1>
 			<TBrowseGamesResults />
-			<Button text={"Volver a buscar"}/>
-			<Button text={"Volver a mis pachangas"}
-
+			<div>
+				<Button text="Volver a buscar"/>
+				<Button text="Volver a mis pachangas"/>
+			</div>
 		</>
 	);
 };

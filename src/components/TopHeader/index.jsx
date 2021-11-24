@@ -1,22 +1,20 @@
-// import {
-// 	Box,
-// 	Flex,
-// 	Button,
-// 	Menu,
-// 	useColorModeValue,
-// 	Stack,
-// } from "@chakra-ui/react";
-
-import Button from "components/Button"
+import "components/index.scss";
 
 export default function TopHeader() {
+
 	return (
-		<div>
-		<h1 > Este es el encabezado </h1>
-
-			<Button text={"Acceder a mi cuenta"}/>
-			<Button text={"Registrarse"}></Button>
-
+		<>
+		<div className="header">
+			<div className="headerTitle">
+				<h1><img
+					src="https://www.imdsg.es/wp-content/uploads/fondo.jpg"
+					alt="Balones y pelotas"
+					width="200vh"
+					height="80vh"
+				/>
+				megustalapachanga</h1>
+			</div>
 		</div>
+		</>
 	);
 }

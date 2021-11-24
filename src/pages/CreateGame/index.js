@@ -1,4 +1,4 @@
-import CreateGameForm from "../../components/Forms/CreateGameForm";
+import CreateGameForm from "../../components/CreateGameForm";
 
 const CreateGame = () => {
 	return <CreateGameForm/>

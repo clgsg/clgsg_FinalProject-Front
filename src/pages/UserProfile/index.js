@@ -1,4 +1,4 @@
-import UserProfileForm from "../../components/Forms/UserProfileForm";
+import UserProfileForm from "components/UserProfileForm";
 
 const UserProfile = () => {
 	return <UserProfileForm />;

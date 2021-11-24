@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Road+Rage&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+$font1: 'Roboto';
+$font2: 'Concert One';
+$header_font: 'Road Rage';
+
+
+$main: teal;
+$mainB: rgb(62, 211, 211);
+$secondary: rgb(252, 248, 248);
+$secondaryB: rgb(129, 129, 129);
+$choco: rgb(77, 70, 65);
+
+
+body {
+	background-color: $secondary;
+	display: flex;
+	justify-content: center;
+	font-family: 'Roboto';
+}
+
+.header {
+	border: solid 5px $mainB;
+	width: 90%;
+	padding: 30px;
+}
+
+// .headerTitle{
+// 	padding: 2px;
+// 	}
+
+.info {
+	border: solid 1px rgb(100, 100, 100);
+	box-shadow: 6px;
+}
+
+.smallCase {
+	font-size: 0.8rem;
+}
+
+.forms {
+	flex: auto;
+}
+
+i{
+	color: $main;
+	animation: fadein 2s 2ms;
+}
+i:hover, i:active, i:focus {
+  color: $main;
+  cursor: pointer;
+  transform: scale(1, 1.2);
+}
+
+
+button, button:visited {
+	color: $secondary;
+	background-color: $main;
+	padding: 2px;
+	border-radius: 4px;
+	border: $secondary 1px solid;
+}
+
+button:hover, button:focus, button:active {
+	color:$main;
+	background-color: $secondary ;
+	padding: 2px;
+	border-radius: 4px;
+	border: $main 1px solid;
+}
+
+h1 {
+	font-family: $header_font;
+	font-size: 7vh;
+	word-spacing: 0.3em;
+}
+
+h2 {
+	font-family: $font2;
+	font-size: large;
+}
+
+h3 {
+	font-family: $font2;
+	font-size: small;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-content: left;
+	flex-direction: row;
+	background-color: $secondary;
+	width: 80%;
+	height: auto;
+}
+
+
+thead {
+	flex-direction: column;
+	border-bottom: solid 1.5px $mainB ;
+	padding: 2px;
+	justify-content: left;
+}
+
+th {
+	font-family: $font2;
+	padding: auto;
+}

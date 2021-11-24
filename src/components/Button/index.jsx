@@ -1,6 +1,5 @@
-import { Redirect } from "react-router";
-import Routes from "routes";
 import { useHistory } from "react-router-dom";
+import "components/index.scss";
 
 function Button(props) {
 	const history = useHistory();

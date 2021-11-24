@@ -1,14 +1,14 @@
-// import { ChakraProvider } from "@chakra-ui/react"
-import Homepage from './Home/index.js'
+import Homepage from './homepage/index.js'
+import {withRouter} from 'react-router-dom';
 
 
 function App({ Component, pageProps }) {
   return (
     <>
-      <h1>Pages > App</h1>
+      <h1>Main App</h1>
       <Homepage/>
     </>
   )
 }
 
-export default App
+export default withRouter(App)
