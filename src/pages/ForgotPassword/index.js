@@ -9,7 +9,7 @@ const forgotPassword = () => {
 			<Button text="Enviar email" />
 			<h3>
 				¿Aún no tienes cuenta? ¡Regístrate
-				<div href={`register`}>aquí!</div>
+				<div to="signup">aquí!</div>
 			</h3>
 		</>
 	);
