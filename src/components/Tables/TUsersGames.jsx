@@ -4,17 +4,17 @@ import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import { games } from "services";
+import { users } from "services";
 import Button from "components/Button";
 import "components/index.scss";
 
 const TUsersGames = () => {
 	const [data, dataSet] = useState([]);
-	console.log(data.data)
+	console.log("UsersGames data: ", data)
 	useEffect(() => {
 		async function fetchMyAPI() {
-			const response = await games.getUpcomingGames();
-			dataSet(response.data.data);
+			const response = await users.getUsersGames();
+			dataSet(response.data);
 		}
 
 		fetchMyAPI();
@@ -47,12 +47,12 @@ const TUsersGames = () => {
 									<Button
 										text="+info"
 										to="users/games"
-										onClick={console.log("Más info: ", data.data)}
+										onClick={console.log("Más info")}
 									/>
 									<Button
 										text="Apuntarme"
 										to="users/games"
-										onClick={console.log("Apuntado: ", data.data)}
+										onClick={console.log("Apuntado")}
 									/>
 								</TableCell>
 							</TableRow>
