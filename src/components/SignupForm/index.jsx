@@ -59,20 +59,20 @@ const SignupForm = () => (
 						{errors.username && touched.username ? (
 							<div>{errors.username}</div>
 						) : null}
-						<Field name="email" type="email" />
+						<Field name="email" type="email" placeholder="Email"/>
 						{errors.email && touched.email ? (
 							<div>{errors.email}</div>
 						) : null}
-						<Field name="password" type="password" />
+						<Field name="password" type="password" placeholder="Contraseña"/>
 						{errors.password && touched.password ? (
 							<div>{errors.password}</div>
 							) : null}
 					</Box>
-					<MyCheckbox name="acceptedTerms">
+					<MyCheckbox name="acceptedTerms" required>
 						Acepto las condiciones de uso y el tratamiento de mis
 						datos
 					</MyCheckbox>
-					<Button type="submit" onClick={signup} text="Registrarme" />
+					<Button type="submit" onClick={()=>signup()} text="Registrarme" to="users/games/:userid"/>
 				</Form>
 			)}
 		</Formik>
