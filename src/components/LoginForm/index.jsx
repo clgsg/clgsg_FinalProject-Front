@@ -44,7 +44,7 @@ const LoginForm = () => {
 						</Box>
 						<Button
 							type="submit"
-							text="Confirmar"
+							text="Acceder"
 							onSubmit={login}
 						>
 						</Button>
