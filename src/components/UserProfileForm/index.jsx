@@ -1,29 +1,76 @@
+import {useEffect, useState} from "react"
 import Button from "components/Button";
 import "components/index.scss";
-function UserProfileForm() {
+import { Formik, Form, Field } from "formik";
+
+import {users} from "services";
+
+const UserProfileForm = () => {
+	const [data, dataSet] = useState([]);
+
+	useEffect(() => {
+		async function fetchMyAPI() {
+			const response = await users.getUserData()
+			dataSet(response.data.data);
+		}
+
+		fetchMyAPI();
+	}, []);
 	return (
 		<>
-			<img alt="user"></img>
-			<h2>Nombre</h2>
-			{/* <ShortText /> */}
-			<h2>Apellidos</h2>
-			{/* <ShortText /> */}
-			<h2>Usuario</h2>
-			{/* <ShortText /> */}
-			<h2>Email</h2>
-			{/* <ShortText /> */}
-			<Button text={"Cambiar email"} />
-			<h2>Contraseña</h2>
-			<Button text={"Cambiar contraseña"} />
-			<h2>Fecha de nacimiento (dd-mm-aaaa)</h2>
-			{/* <ShortText /> */}
-			<h2>Eres</h2>
-			{/* <RadioButton label={"Hombre"} /> */}
-			{/* <RadioButton label={"Mujer"} /> */}
+			<h2>Datos personales</h2>
+			<Formik initialValues={{
+					name: "",
+					family_name: "",
+					birthdate: "",
+					gender: "",
+				}}
+				onSubmit={async (values) => {
+					console.log("Datos personales:", values);
+					await new Promise((r) => setTimeout(r, 500));
+					alert(JSON.stringify(values, null, 2));
+			}}>
+				{data && data.map((trx) => (
+				<Form>
+					<Field name="select_pic" type="text" />
+					<img alt="user"></img>
+					<h3>Nombre</h3>
+					<Field name="firstName" placeholder="Nombre" />
+					<h3>Apellidos</h3>
+					<Field name="familyName" placeholder="Apellido" />
+					<h3>Usuario</h3>
+					<Field name="username" value={trx.username} />
+					<h3>Email</h3>
+					<Field name="email" value={trx.email}/>
+					<Button
+						text={"Cambiar email"}
+						to={`auth/email/update`}
+					/>
+					<h3>Contraseña</h3>
+					<Button
+						text={"Cambiar contraseña"}
+						to={`/auth/pwd/update`}
+					/>
+					<h3>Fecha de nacimiento (dd-mm-aaaa)</h3>
+					<Field name="" placeholder="" />
 
-			<Button text={"Acceder"} />
-		</>
+					<div id="my-radio-group"><h3>Eres</h3>
+					<div role="group" aria-labelledby="my-radio-group">
+						<label>
+							<Field type="radio" name="gender" value="Hombre" />
+							Hombre
+						</label>
+						<label>
+							<Field type="radio" name="gender" value="Mujer" />
+							Mujer
+						</label>
+					</div>
+					</div>
+				</Form>))}
+			</Formik>
+			</>
 	);
 }
+
 
 export default UserProfileForm;

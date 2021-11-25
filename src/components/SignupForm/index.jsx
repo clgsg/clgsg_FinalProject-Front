@@ -17,7 +17,7 @@ const schema = yup.object().shape({
 	email: yup.string().email("Email no válido").required("Campo obligatorio"),
 	password: yup
 		.string()
-		.password("Contraseña no válida")
+		// .password("Contraseña no válida")
 		.min(8, "¡No tan corta!")
 		.max(15, "¡No tan larga!")
 		.required("Campo obligatorio"),
@@ -83,7 +83,7 @@ const SignupForm = () => (
 						type="submit"
 						onClick={() => signup()}
 						text="Registrarme"
-						to="users/games/:userid"
+						to="users/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/profile"
 					/>
 				</Form>
 			)}

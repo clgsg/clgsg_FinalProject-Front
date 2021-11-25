@@ -19,15 +19,11 @@ body {
 	font-family: 'Roboto';
 }
 
-.header {
-	border: solid 5px $mainB;
+.headerTitle {
+	border: solid 5px $main;
 	width: 90%;
-	padding: 30px;
+	padding: 10px;
 }
-
-// .headerTitle{
-// 	padding: 2px;
-// 	}
 
 .info {
 	border: solid 1px rgb(100, 100, 100);
@@ -52,21 +48,28 @@ i:hover, i:active, i:focus {
   transform: scale(1, 1.2);
 }
 
-
 button, button:visited {
 	color: $secondary;
 	background-color: $main;
-	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 4px;
+	padding-top: 4px;
 	border-radius: 4px;
 	border: $secondary 1px solid;
+	margin-top: 5px;
 }
 
 button:hover, button:focus, button:active {
 	color:$main;
 	background-color: $secondary ;
-	padding: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 4px;
+	padding-top: 4px;
 	border-radius: 4px;
 	border: $main 1px solid;
+	margin-top: 5px;
 }
 
 h1 {
@@ -127,4 +130,9 @@ acceptedTerms {
 	font-family: 'Roboto';
 	font-size: 0.2rem;
 	color: $secondaryB;
+}
+
+.tabgroup {
+	font-family: 'Courier New', Courier, monospace;
+	background-color: bisque;
 }
