@@ -1,4 +1,4 @@
-import TUsersGames from "../../components/Tables/TUsersGames";
+import TUsersGames from "../Tables/TUsersGames";
 
 const UserGames = () => {
 	return <TUsersGames/>;
