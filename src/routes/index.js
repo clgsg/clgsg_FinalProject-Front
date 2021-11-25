@@ -1,6 +1,6 @@
-// import BrowseGames from "pages/browseGames";
-// import BrowseGamesResults from "pages/browseGamesResults";
-// import CreateGame from "pages/createGame";
+import BrowseGames from "pages/browseGames";
+import BrowseGamesResults from "pages/browseGamesResults";
+import CreateGame from "pages/createGame";
 import ForgotPassword from "pages/forgotPassword";
 import GameDetails from "pages/gameDetails";
 import Homepage from "pages/homepage";
@@ -8,34 +8,34 @@ import LoginPage from "pages/loginPage";
 import SignupPage from "pages/signupPage";
 import UpdateEmail from "pages/updateEmail";
 import UpdatePassword from "pages/updateEmail";
-// import UpdatePic from "pages/updatePic";
+import UpdatePic from "pages/updatePic";
 import UserGames from "pages/userGames";
-// import UserPreferences from "pages/userPreferences";
+import UserPreferences from "pages/userPreferences";
 import UserProfile from "pages/userProfile";
 
 const Routes = [
-	// {
-	// 	path: "/browse",
-	// 	component: BrowseGames,
-	// 	exact: true,
-	// },
-	// {
-	// 	path: "/browse/results",
-	// 	component: BrowseGamesResults,
-	// 	exact: true,
-	// },
-	// {
-	// 	path: "/new",
-	// 	component: CreateGame,
-	// 	exact: true,
-	// },
 	{
-		path: "/forgot",
+		path: "/browsegames",
+		component: BrowseGames,
+		exact: true,
+	},
+	{
+		path: "/browsegresults",
+		component: BrowseGamesResults,
+		exact: true,
+	},
+	{
+		path: "/newgame",
+		component: CreateGame,
+		exact: true,
+	},
+	{
+		path: "/forgotpwd",
 		component: ForgotPassword,
 		exact: true,
 	},
 	{
-		path: "/details",
+		path: "/gameinfo",
 		component: GameDetails,
 		exact: true,
 	},
@@ -55,32 +55,32 @@ const Routes = [
 		exact: true,
 	},
 	{
-		path: "/email/update",
+		path: "/emailupdate",
 		component: UpdateEmail,
 		exact: true,
 	},
 	{
-		path: "/pwd/update",
+		path: "/pwdupdate",
 		component: UpdatePassword,
 		exact: true,
 	},
-	// {
-	// 	path: "/pic/update",
-	// 	component: UpdatePic,
-	// 	exact: true,
-	// },
 	{
-		path: "/games",
+		path: "/picupdate",
+		component: UpdatePic,
+		exact: true,
+	},
+	{
+		path: "/usersgames",
 		component: UserGames,
 		exact: true,
 	},
-	// {
-	// 	path: "/preferences",
-	// 	component: UserPreferences,
-	// 	exact: true,
-	// },
 	{
-		path: "/profile",
+		path: "userpreferences",
+		component: UserPreferences,
+		exact: true,
+	},
+	{
+		path: "/userprofile",
 		component: UserProfile,
 		exact: true,
 	},

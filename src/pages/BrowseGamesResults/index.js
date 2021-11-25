@@ -10,7 +10,7 @@ const BrowseGamesResults = () => {
 			<TBrowseGamesResults />
 			<div>
 				<Button text="Volver a buscar"/>
-				<Button text="Volver a mis pachangas"/>
+				<Button text="Volver a mis pachangas" to="usersgames"/>
 			</div>
 		</>
 	);

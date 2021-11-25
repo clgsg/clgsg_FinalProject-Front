@@ -1,4 +1,5 @@
 import TUpcomingGames from "../../components/Tables/TUpcomingGames";
+import { Box } from "@mui/system";
 import Button from "components/Button";
 import "components/index.scss";
 
@@ -10,14 +11,18 @@ const Homepage = () => {
 				<h2> Próximas pachangas:</h2>
 				<TUpcomingGames />
 			</div>
-			<div>
+			<Box>
+				<div>
 				<p>¿Ya tienes cuenta?</p>
 				<Button className="LoginButton"
 					text="Acceder"
 					to="login"/>
+				</div>
+				<div>
 				<p>¿Aún no tienes cuenta?</p>
 				<Button className="SignupButton" text="Registrarse" to="signup"/>
-			</div>
+				</div>
+			</Box>
 		</div>
 	);
 }

@@ -78,6 +78,7 @@ h1 {
 h2 {
 	font-family: $font2;
 	font-size: large;
+	color: $main;
 }
 
 h3 {
@@ -91,8 +92,8 @@ header {
 	align-content: left;
 	flex-direction: row;
 	background-color: $secondary;
-	width: 80%;
-	height: auto;
+	width: 80vw;
+	height: 20%;
 }
 
 
@@ -106,4 +107,24 @@ thead {
 th {
 	font-family: $font2;
 	padding: auto;
+}
+
+.fieldContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	font-family: $font2;
+	color: $main;
+}
+
+acceptedTerms {
+	font-family: $font1;
+}
+
+::placeholder{
+	font-family: 'Roboto';
+	font-size: 0.2rem;
+	color: $secondaryB;
 }

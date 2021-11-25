@@ -1,4 +1,5 @@
 import Button from "components/Button";
+import { Box } from "@mui/system";
 import { Formik, Form, Field } from "formik";
 import { login } from "services/auth";
 import "components/index.scss";
@@ -29,14 +30,18 @@ const LoginForm = () => {
 			>
 				{({ errors, touched }) => (
 					<Form>
-						<Field name="username_email" type="email" placeholder="Usuario o email"/>
-						{errors.username_email && touched.username_email ? (
-							<div>{errors.username_email}</div>
-						) : null}
-						<Field name="password" type="password" placeholder="Contraseña"/>
-						{errors.password && touched.password ? (
-							<div>{errors.password}</div>
-						) : null}
+						<Box className="fieldContainer">
+							<label>Usuario o email</label>
+							<Field name="username_email" type="email" placeholder="Usuario o email"/>
+							{errors.username_email && touched.username_email ? (
+								<div>{errors.username_email}</div>
+							) : null}
+							<label>Contraseña</label>
+							<Field name="password" type="password" placeholder="Contraseña"/>
+							{errors.password && touched.password ? (
+								<div>{errors.password}</div>
+							) : null}
+						</Box>
 						<Button
 							type="submit"
 							text="Confirmar"

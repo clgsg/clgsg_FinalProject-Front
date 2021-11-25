@@ -1,4 +1,10 @@
-import {Table, useState, useEffect} from "react"
+import {useState, useEffect} from "react"
+import { Link } from "react-router-dom";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableRow from "@mui/material/TableRow";
+
 import "components/index.scss";
 import {games} from "services"
 
@@ -19,70 +25,52 @@ const GameDetails = () => {
 		<>
 			<h2>Qué</h2>
 			<Table>
-				<div>
-					<div>
-						<div>
+				<TableBody>
+					<TableRow>
+						<TableCell>
 							<h2>Qué</h2>
-						</div>
-						<div>{data.sport}</div>
-					</div>
-					<div>
-						<div>
+						</TableCell>
+						<TableCell>{data.sport}</TableCell>
+					</TableRow>
+					<TableRow>
+						<TableCell>
 							<h2>Cuándo</h2>
-						</div>
-						<div>{data.game_date} a las {data.game_time}</div>
-					</div>
-					<div>
-						<div>
+						</TableCell>
+						<TableCell>
+							{data.game_date} a las {data.game_time}
+						</TableCell>
+					</TableRow>
+					<TableRow>
+						<TableCell>
 							<h2>Dónde</h2>
-						</div>
-						<div>
+						</TableCell>
+						<TableCell>
 							{data.game_venue}
-							{/* <Link href="venues/info">
+							<Link
+								to={`/games/info?gameid=${data.gameid}`}>
 								Ver detalles
 							</Link>
-
-						</div>
-					</div>
-					<div>
-						<div>
-							<h2>Participantes</h2>
-						</div>
-						<div>
-							5 participantes (
-							<Link href="#" color="teal.700">
-								Ver detalles
-							</Link>
-							)
-						</div>
-					</div>
-					<div>
-						<div>
-							<h2>Nivel</h2>
-						</div>
-						<div>Intermedio</div>
-					</div>
-					<div>
-						<div>*/}
-							<h2>Adaptado</h2>
-						</div>
-						<div>{data.adapted}</div>
-					</div>
-					<div>
-						<div>
+						</TableCell>
+					</TableRow>
+					<TableRow>
+						<TableCell>
 							<h2>Masc./Fem./Mixto</h2>
-						</div>
-						<div>{data.game_gender}</div>
-					</div>
-					<div>
-						<div>
+						</TableCell>
+						<TableCell>{data.game_gender}</TableCell>
+					</TableRow>
+					<TableRow>
+						<TableCell>
+							<h2>Adaptado</h2>
+						</TableCell>
+						<TableCell>{data.adapted}</TableCell>
+					</TableRow>
+					<TableRow>
+						<TableCell>
 							<h2>Comentario</h2>
-						</div>
-						<div>
-							{data.notes}
-						</div>
-					</div>
-				</div>
+						</TableCell>
+						<TableCell>{data.notes}</TableCell>
+					</TableRow>
+				</TableBody>
 			</Table>
 		</>
 	);
