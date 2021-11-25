@@ -16,11 +16,11 @@ const Homepage = () => {
 				<p>¿Ya tienes cuenta?</p>
 				<Button className="LoginButton"
 					text="Acceder"
-					to="login"/>
+					to="auth/login"/>
 				</div>
 				<div>
 				<p>¿Aún no tienes cuenta?</p>
-				<Button className="SignupButton" text="Registrarse" to="signup"/>
+				<Button className="SignupButton" text="Registrarse" to="auth/signup"/>
 				</div>
 			</Box>
 		</div>

@@ -9,33 +9,31 @@ import SignupPage from "pages/signupPage";
 import UpdateEmail from "pages/updateEmail";
 import UpdatePassword from "pages/updateEmail";
 import UpdatePic from "pages/updatePic";
-import UserGames from "pages/userGames";
-import UserPreferences from "pages/userPreferences";
-import UserProfile from "pages/userProfile";
+import UserTabs from "pages/userTabs";
 
 const Routes = [
 	{
-		path: "/browsegames",
+		path: "/games",
 		component: BrowseGames,
 		exact: true,
 	},
 	{
-		path: "/browsegresults",
+		path: "/games/filtered",
 		component: BrowseGamesResults,
 		exact: true,
 	},
 	{
-		path: "/newgame",
+		path: "/games/new",
 		component: CreateGame,
 		exact: true,
 	},
 	{
-		path: "/forgotpwd",
+		path: "/auth/pwd/forgotten",
 		component: ForgotPassword,
 		exact: true,
 	},
 	{
-		path: "/gameinfo",
+		path: "/game/:gameid/info",
 		component: GameDetails,
 		exact: true,
 	},
@@ -45,43 +43,43 @@ const Routes = [
 		exact: true,
 	},
 	{
-		path: "/login",
+		path: "/auth/login",
 		component: LoginPage,
 		exact: true,
 	},
 	{
-		path: "/signup",
+		path: "/auth/signup",
 		component: SignupPage,
 		exact: true,
 	},
 	{
-		path: "/emailupdate",
+		path: "/auth/email/update",
 		component: UpdateEmail,
 		exact: true,
 	},
 	{
-		path: "/pwdupdate",
+		path: "/auth/pwd/update",
 		component: UpdatePassword,
 		exact: true,
 	},
 	{
-		path: "/picupdate",
+		path: "/user/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/updatepic",
 		component: UpdatePic,
 		exact: true,
 	},
 	{
-		path: "/usersgames",
-		component: UserGames,
+		path: "/user/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/profile",
+		component: UserTabs,
 		exact: true,
 	},
 	{
-		path: "userpreferences",
-		component: UserPreferences,
+		path: "/user/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/games",
+		component: UserTabs,
 		exact: true,
 	},
 	{
-		path: "/userprofile",
-		component: UserProfile,
+		path: "/user/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/update",
+		component: UserTabs,
 		exact: true,
 	},
 ];
