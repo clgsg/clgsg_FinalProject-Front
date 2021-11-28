@@ -81,7 +81,8 @@ const SignupForm = () => (
 					</MyCheckbox>
 					<Button
 						type="submit"
-						onClick={() => signup()}
+						// onClick={() => signup()}
+						onClick={signup}
 						text="Registrarme"
 						to="users/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/profile"
 					/>

@@ -14,13 +14,7 @@ const schema = yup.object().shape({
 		.email()
 		.required("Campo obligatorio")
 		.oneOf([yup.ref("email"), null], "Ambos emails deben coincidir."),
-	password: yup
-		.string()
-		.password("Contraseña no válida.")
-		.min(8, "¡No tan corta!")
-		.max(15, "¡No tan larga!")
-		.required("Campo obligatorio."),
-});
+	});
 
 const ForgotPasswordForm = () => {
 	const history = useHistory()
@@ -30,7 +24,7 @@ const ForgotPasswordForm = () => {
 			initialValues={{
 				username: "",
 				email: "",
-				password: "",
+
 			}}
 			validationSchema={schema}
 			onSubmit={(values) => {
@@ -47,10 +41,7 @@ const ForgotPasswordForm = () => {
 					{errors.email && touched.email ? (
 						<div>{errors.email}</div>
 					) : null}
-					<Field name="password" type="password" />
-					{errors.password && touched.password ? (
-						<div>{errors.password}</div>
-					) : null}
+
 					<div spacing={4}>
 						<Button type="reset" text="Cancelar"/>
 						<Button type="submit" text="Confirmar" onSubmit={() => history.push("/login")}/>

@@ -13,7 +13,7 @@ YupPassword(yup);
 
 const schema = yup.object().shape({
 	username_email: yup.string().required("Campo obligatorio"),
-	password: yup.string().password("Contraseña no válida"),
+	password: yup.string().required("Campo obligatorio").password("Contraseña no válida"),
 });
 
 const LoginForm = () => {
@@ -46,9 +46,8 @@ const LoginForm = () => {
 							type="submit"
 							text="Acceder"
 							onSubmit={login}
-						>
-						</Button>
-					</Form>
+							to="users/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/games"/>
+							</Form>
 				)}
 			</Formik>)
 };

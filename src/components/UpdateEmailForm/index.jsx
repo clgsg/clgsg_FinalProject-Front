@@ -1,6 +1,7 @@
 import Button from "components/Button";
 import "components/index.scss";
 import { Formik, Form, Field } from "formik";
+import { updateEmail } from "services/auth";
 
 import * as yup from "yup";
 import YupPassword from "yup-password";
@@ -52,8 +53,15 @@ const UpdateEmailForm = () => (
 					{errors.password && touched.password ? (
 						<div>{errors.password}</div>
 					) : null}
-					<Button>Cancelar</Button>
-					<Button type="submit" onClick={console.log("Nueva contraseña enviada")}>Confirmar</Button>
+					<Button
+						type="reset"
+						text="Cancelar"
+						to="users/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/profile"/>
+					<Button
+						type="submit"
+						onClick={updateEmail}
+						text="Confirmar"
+						to="users/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/profile"/>
 				</Form>
 			)}
 		</Formik>

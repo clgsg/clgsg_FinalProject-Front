@@ -13,7 +13,7 @@ export const login =
 	({ get }) =>
 	async() => {
 		try {
-			return (await get(`/auth/login`)).data;
+			return (await get(`/auth/login`));
 		} catch (error) {
 			console.info("¡Vaya! Parece que hay un problema con el acceso.");
 			return false;
