@@ -1,6 +1,6 @@
 // import UserGames from "components/UserGames";
-import BrowseGames from "pages/browseGames";
-import BrowseGamesResults from "pages/browseGamesResults";
+// import BrowseGames from "pages/browseGames";
+// import BrowseGamesResults from "pages/browseGamesResults";
 import CreateGame from "pages/createGame";
 import ForgotPassword from "pages/forgotPassword";
 import GameDetails from "pages/gameDetails";
@@ -13,16 +13,16 @@ import UpdatePic from "pages/updatePic";
 import UserTabs from "pages/userTabs";
 
 const Routes = [
-	{
-		path: "/games",
-		component: BrowseGames,
-		exact: true,
-	},
-	{
-		path: "/games/filtered",
-		component: BrowseGamesResults,
-		exact: true,
-	},
+	// {
+	// 	path: "/games",
+	// 	component: BrowseGames,
+	// 	exact: true,
+	// },
+	// {
+	// 	path: "/games/filtered",
+	// 	component: BrowseGamesResults,
+	// 	exact: true,
+	// },
 	{
 		path: "/games/new",
 		component: CreateGame,
