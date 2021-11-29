@@ -1,138 +1,49 @@
-import {useState} from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import { styled } from "@mui/material/styles";
 
 import UserProfile from "components/UserProfile";
 import UserGames from "components/UserGames";
-import UserPreferencesForm from "components/UserPreferencesForm";
+import UserPreferences from "components/UserPreferences";
 
-const StyledTabs = styled((props) => (
-	<Tabs
-		{...props}
-		TabIndicatorProps={{
-			children: <span className="MuiTabs-indicatorSpan" />,
-		}}
-	/>
-))({
-	"& .MuiTabs-indicator": {
-		display: "flex",
-		justifyContent: "center",
-		backgroundColor: "white",
-	},
-	"& .MuiTabs-indicatorSpan": {
-		width: "100%",
-		backgroundColor: "teal",
-	},
-});
+const Home = (props) => {
+	const { match, history } = props;
+	const { params } = match;
+	const { page } = params;
 
-const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
-	({ theme }) => ({
-		textTransform: "none",
-		fontWeight: theme.typography.fontWeightRegular,
-		fontSize: theme.typography.pxToRem(15),
-		marginRight: theme.spacing(1),
-		color: "teal",
-		"&.Mui-selected": {
-			color: "teal",
-		},
-		"&.Mui-focusVisible": {
-			backgroundColor: "pink",
-		},
-	})
-);
-function TabPanel(props) {
-	const { children, value, index, ...other } = props;
-
-	return (
-		<div
-			role="tabpanel"
-			hidden={value !== index}
-			id={`simple-tabpanel-${index}`}
-			aria-labelledby={`simple-tab-${index}`}
-			{...other}
-		>
-			{value === index && (
-				<Box>
-					<Typography>{children}</Typography>
-				</Box>
-			)}
-		</div>
-	);
-}
-
-TabPanel.propTypes = {
-	children: PropTypes.node,
-	index: PropTypes.number.isRequired,
-	value: PropTypes.number.isRequired,
-};
-
-function a11yProps(index) {
-	return {
-		id: `simple-tab-${index}`,
-		"aria-controls": `simple-tabpanel-${index}`,
+	const tabNameToIndex = {
+		0: "profile",
+		1: "games",
+		2: "preferences"
 	};
-}
 
-export default function ProfileTabs() {
-	const [value, setValue] = useState(0);
+	const indexToTabName = {
+		profile: 0,
+		games: 1,
+		preferences: 2
+	};
+
+	const [selectedTab, setSelectedTab] = React.useState(indexToTabName[page]);
 
 	const handleChange = (event, newValue) => {
-		setValue(newValue);
+		history.push(
+			`/users/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/${tabNameToIndex[newValue]}`
+		);
+		setSelectedTab(newValue);
 	};
 
 	return (
 		<>
-
-			<Box sx={{ bgcolor: "rgb(252, 248, 248)" }}>
-				<StyledTabs
-					value={value}
-					onChange={handleChange}
-					aria-label="user-profile-tabs"
-				>
-					<StyledTab
-						label="Perfil"
-						{...a11yProps(0)}
-						value={value}
-						index={0}
-					>
-						<TabPanel>
-							<UserProfile />
-						</TabPanel>
-					</StyledTab>
-					<StyledTab
-						label="Pachangas"
-						{...a11yProps(1)}
-						value={value}
-						index={1}
-					>
-						<TabPanel>
-							<UserGames />
-						</TabPanel>
-					</StyledTab>
-					<StyledTab
-						label="Preferencias"
-						{...a11yProps(2)}
-						value={value}
-						index={2}
-					>
-						<TabPanel>
-							<UserPreferencesForm />
-						</TabPanel>
-					</StyledTab>
-				</StyledTabs>
-				<Box
-					sx={{
-						p: 3,
-						bgcolor: "white",
-						borderColor: "teal",
-						textColor: "teal",
-					}}
-				/>
-			</Box>
+				<Tabs value={selectedTab} onChange={handleChange}>
+					<Tab label="Perfil" />
+					<Tab label="Pachangas" />
+					<Tab label="Preferencias" />
+				</Tabs>
+			{selectedTab === 0 && <UserProfile />}
+			{selectedTab === 1 && <UserGames />}
+			{selectedTab === 2 && <UserPreferences />}
 		</>
 	);
-}
+};
+
+export default Home;

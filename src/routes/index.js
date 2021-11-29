@@ -1,3 +1,4 @@
+// import UserGames from "components/UserGames";
 import BrowseGames from "pages/browseGames";
 import BrowseGamesResults from "pages/browseGamesResults";
 import CreateGame from "pages/createGame";
@@ -63,22 +64,13 @@ const Routes = [
 		exact: true,
 	},
 	{
-		path: "/user/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/updatepic",
+		path: "/users/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/updatepic",
 		component: UpdatePic,
 		exact: true,
 	},
 	{
-		path: "/user/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/profile",
-		component: UserTabs,
-		exact: true,
-	},
-	{
-		path: "/user/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/games",
-		component: UserTabs,
-		exact: true,
-	},
-	{
-		path: "/user/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/update",
+		path: `/users/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/:tab?`,
+		render: "{props => <App {...props}/>}",
 		component: UserTabs,
 		exact: true,
 	},
