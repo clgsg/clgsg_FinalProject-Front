@@ -1,7 +1,7 @@
 import TUpcomingGames from "../../components/Tables/TUpcomingGames";
 import { Box } from "@mui/system";
 import Button from "components/Button";
-import "components/index.scss";
+import "index.scss";
 
 const Homepage = () => {
 	return (

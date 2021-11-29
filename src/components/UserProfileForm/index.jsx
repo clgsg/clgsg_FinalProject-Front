@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react"
 import Button from "components/Button";
-import "components/index.scss";
+import "index.scss";
 import {users} from "services";
 
 const UserProfileForm = () => {

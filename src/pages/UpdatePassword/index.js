@@ -1,5 +1,5 @@
 import Button from "components/Button";
-import "components/index.scss";
+import "index.scss";
 import UpdatePasswordForm from "components/Forms/UpdatePasswordForm";
 
 const updatePassword = () => {

@@ -1,5 +1,5 @@
 import Button from "components/Button";
-import "components/index.scss";
+import "index.scss";
 import { FormControlLabel, FormGroup, Checkbox } from "@mui/material";
 
  function UserPreferencesForm(){

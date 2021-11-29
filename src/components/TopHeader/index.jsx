@@ -1,4 +1,4 @@
-import "components/index.scss";
+import "index.scss";
 
 export default function TopHeader() {
 

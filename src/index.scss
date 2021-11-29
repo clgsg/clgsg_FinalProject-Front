@@ -99,19 +99,6 @@ header {
 	height: 20%;
 }
 
-
-thead {
-	flex-direction: column;
-	border-bottom: solid 1.5px $mainB ;
-	padding: 2px;
-	justify-content: left;
-}
-
-th {
-	font-family: $font2;
-	padding: auto;
-}
-
 .fieldContainer {
 	display: flex;
 	flex-direction: column;
@@ -132,7 +119,12 @@ acceptedTerms {
 	color: $secondaryB;
 }
 
-.tabgroup {
+.tabWrapper {
 	font-family: 'Courier New', Courier, monospace;
 	background-color: bisque;
 }
+
+.tableWrapper {
+	width: 98vw;
+}
+

@@ -1,5 +1,5 @@
 import Button from "components/Button";
-import "components/index.scss";
+import "index.scss";
 import { updateEmail } from "services/auth";
 
 const UpdateEmailForm = () => (

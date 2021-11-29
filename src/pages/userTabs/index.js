@@ -34,6 +34,7 @@ const Home = (props) => {
 
 	return (
 		<>
+			<div className="tabWrapper">
 				<Tabs value={selectedTab} onChange={handleChange}>
 					<Tab label="Perfil" />
 					<Tab label="Pachangas" />
@@ -42,7 +43,7 @@ const Home = (props) => {
 			{selectedTab === 0 && <UserProfile />}
 			{selectedTab === 1 && <UserGames />}
 			{selectedTab === 2 && <UserPreferences />}
-		</>
+		</div></>
 	);
 };
 

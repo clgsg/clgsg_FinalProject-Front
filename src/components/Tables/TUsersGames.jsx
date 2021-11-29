@@ -6,7 +6,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { users } from "services";
 import Button from "components/Button";
-import "components/index.scss";
+import "index.scss";
 
 const TUsersGames = () => {
 	const [data, dataSet] = useState([]);

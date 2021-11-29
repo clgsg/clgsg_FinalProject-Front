@@ -1,6 +1,6 @@
 import Button from "components/Button";
 import { login } from "services/auth";
-import "components/index.scss";
+import "index.scss";
 
 
 

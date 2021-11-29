@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import "components/index.scss";
+import "index.scss";
 
 function Button(props) {
 	const history = useHistory();

@@ -1,6 +1,6 @@
 import GameDetails from "components/GameDetails";
 import Button from "components/Button";
-import "components/index.scss";
+import "index.scss";
 
 
 const gameInfo = () => {

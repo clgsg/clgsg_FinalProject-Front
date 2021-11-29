@@ -1,5 +1,5 @@
 // import { useHistory } from "react-router";
-import "components/index.scss";
+import "index.scss";
 import Button from "components/Button";
 import UpdateEmailForm from "components/UpdateEmailForm";
 
