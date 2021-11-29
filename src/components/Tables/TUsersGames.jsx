@@ -16,7 +16,6 @@ const TUsersGames = () => {
 			const response = await users.getUsersGames();
 			dataSet(response.data);
 		}
-
 		fetchMyAPI();
 	}, []);
 	return (
@@ -24,13 +23,13 @@ const TUsersGames = () => {
 			<Table>
 				<TableHead>
 					<TableRow>
-						<th>Deporte</th>
-						<th>Fecha</th>
-						<th>Hora</th>
-						<th>Masc./Fem.</th>
-						<th>Adaptado</th>
-						<th>Lugar</th>
-						<th></th>
+						<TableCell>Deporte</TableCell>
+						<TableCell>Fecha</TableCell>
+						<TableCell>Hora</TableCell>
+						<TableCell>Masc./Fem.</TableCell>
+						<TableCell>Adaptado</TableCell>
+						<TableCell>Lugar</TableCell>
+						<TableCell></TableCell>
 					</TableRow>
 				</TableHead>
 				<TableBody>

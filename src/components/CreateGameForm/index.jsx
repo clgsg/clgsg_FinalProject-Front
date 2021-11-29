@@ -2,7 +2,7 @@ import Button from "components/Button";
 import "components/index.scss";
 import Calendar from "components/DateAndTime/Calendar.jsx";
 
-function FilterGameForm() {
+function CreateGameForm() {
 	return (
 		<>
 			<h2>Qué</h2>
@@ -61,4 +61,4 @@ function FilterGameForm() {
 	);
 }
 
-export default FilterGameForm;
+export default CreateGameForm;

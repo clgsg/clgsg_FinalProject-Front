@@ -2,9 +2,9 @@ import React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
-import UserProfile from "components/UserProfile";
-import UserGames from "components/UserGames";
-import UserPreferences from "components/UserPreferences";
+import UserProfile from "components/UserProfile/index";
+import UserGames from "components/UserGames/index";
+import UserPreferences from "components/UserPreferences/index";
 
 const Home = (props) => {
 	const { match, history } = props;
@@ -27,7 +27,7 @@ const Home = (props) => {
 
 	const handleChange = (event, newValue) => {
 		history.push(
-			`/users/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/${tabNameToIndex[newValue]}`
+			`/users/:userid/${tabNameToIndex[newValue]}`
 		);
 		setSelectedTab(newValue);
 	};

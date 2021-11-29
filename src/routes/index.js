@@ -6,7 +6,7 @@ import UserTabs from "pages/userTabs";
 
 const Routes = [
 	{
-		path: "/game/:gameid/info",
+		path: "/games/:gameid/info",
 		component: GameDetails,
 		exact: true,
 	},
@@ -26,7 +26,7 @@ const Routes = [
 		exact: true,
 	},
 	{
-		path: `/users/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/:tab?`,
+		path: `/users/:userid/:tab?`,
 		render: "{props => <App {...props}/>}",
 		component: UserTabs,
 		exact: true,

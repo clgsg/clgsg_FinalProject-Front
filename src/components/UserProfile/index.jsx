@@ -1,7 +1,7 @@
 import { Table, TableBody, TableCell, TableRow } from "@mui/material";
 import Button from "components/Button";
 
-const UserPreferences = () => {
+const UserProfile = () => {
 	return (
 		<>
 			<div>
@@ -48,4 +48,4 @@ const UserPreferences = () => {
 	);
 };
 
-export default UserPreferences;
+export default UserProfile;

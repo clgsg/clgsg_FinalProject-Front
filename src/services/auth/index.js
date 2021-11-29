@@ -10,10 +10,10 @@ export const signup =
 	};
 
 export const login =
-	({ get }) =>
+	({ post }) =>
 	async() => {
 		try {
-			return (await get(`/auth/login`));
+			return (await post(`/auth/login`));
 		} catch (error) {
 			console.info("¡Vaya! Parece que hay un problema con el acceso.");
 			return false;
@@ -21,27 +21,27 @@ export const login =
 	};
 
 
-export const updateEmail =
-	({ put }) =>
-	async() => {
-		try {
-			return (await put(`/auth/email/update`)).data;
-		} catch (error) {
-			console.info("¡Vaya! Parece que hay un problema para actualizar tu email.");
-			return false;
-		}
-	};
+// export const updateEmail =
+// 	({ put }) =>
+// 	async() => {
+// 		try {
+// 			return (await put(`/auth/email/update`)).data;
+// 		} catch (error) {
+// 			console.info("¡Vaya! Parece que hay un problema para actualizar tu email.");
+// 			return false;
+// 		}
+// 	};
 
 
-export const updatePassword =
-	({ put }) =>
-	async() => {
-		try {
-			return (await put(`/auth/password/update`)).data;
-		} catch (error) {
-			console.info(
-				"¡Vaya! Parece que hay un problema para actualizar tu contraseña."
-			);
-			return false;
-		}
-	};
+// export const updatePassword =
+// 	({ put }) =>
+// 	async() => {
+// 		try {
+// 			return (await put(`/auth/pwd/update`)).data;
+// 		} catch (error) {
+// 			console.info(
+// 				"¡Vaya! Parece que hay un problema para actualizar tu contraseña."
+// 			);
+// 			return false;
+// 		}
+// 	};

@@ -6,7 +6,7 @@ const LoginPage = () => {
 		<>
 			<h1>Acceso</h1>
 			<LoginForm />
-			<p>¿Aún no tienes cuenta? ¡Regístrate <Link to="auth/signup">aquí!</Link></p>
+			<p>¿Aún no tienes cuenta? ¡Regístrate <Link to="signup">aquí!</Link></p>
 		</>
 	);
 };
