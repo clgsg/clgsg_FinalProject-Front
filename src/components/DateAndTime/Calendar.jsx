@@ -1,24 +1,12 @@
 import {useState} from "react";
-
-// import {DatePicker} from "react-datepicker/DayPickerInput";
-// import { DateUtils } from "react-datepicker";
-// import "react-day-picker/lib/style.css";
-
-
-
+import MobileDatePicker from '@mui/lab/MobileDatePicker';
 
 function Calendar() {
-	// function parseDate(str, format, locale) {
-	// 	const parsed = dateFnsParse(str, format, new Date(), { locale });
-	// 	if (DateUtils.isDate(parsed)) {
-	// 		return parsed;
-	// 	}
-	// 	return undefined;
-	// }
+
 	const [startDate, setStartDate] = useState(new Date());
 		return (
 			<>
-				{/* <DatePicker */}
+				<MobileDatePicker
 					selected={startDate}
 					onChange={(date) => setStartDate(date)}
 					locale="es-ES"
@@ -29,7 +17,7 @@ function Calendar() {
 					placeholderText="Selecciona fecha y hora"
 					withPortal
 					calendarStartDay={1}
-				{/* /> */}
+			 />
 			</>
 		);
 }
