@@ -2,14 +2,14 @@
 // import BrowseGames from "pages/browseGames";
 // import BrowseGamesResults from "pages/browseGamesResults";
 // import CreateGame from "pages/createGame";
+// import UpdateEmail from "pages/updateEmail";
+// import UpdatePassword from "pages/updateEmail";
+// import UpdatePic from "pages/updatePic";
 import ForgotPassword from "pages/forgotPassword";
 import GameDetails from "pages/gameDetails";
 import Homepage from "pages/homepage";
 import LoginPage from "pages/loginPage";
 import SignupPage from "pages/signupPage";
-// import UpdateEmail from "pages/updateEmail";
-// import UpdatePassword from "pages/updateEmail";
-// import UpdatePic from "pages/updatePic";
 import UserTabs from "pages/userTabs";
 
 const Routes = [
