@@ -5,7 +5,7 @@
 // import UpdateEmail from "pages/updateEmail";
 // import UpdatePassword from "pages/updateEmail";
 // import UpdatePic from "pages/updatePic";
-import ForgotPassword from "pages/forgotPassword";
+// import ForgotPassword from "pages/forgotPassword";
 import GameDetails from "pages/gameDetails";
 import Homepage from "pages/homepage";
 import LoginPage from "pages/loginPage";
@@ -13,26 +13,6 @@ import SignupPage from "pages/signupPage";
 import UserTabs from "pages/userTabs";
 
 const Routes = [
-	// {
-	// 	path: "/games",
-	// 	component: BrowseGames,
-	// 	exact: true,
-	// },
-	// {
-	// 	path: "/games/filtered",
-	// 	component: BrowseGamesResults,
-	// 	exact: true,
-	// },
-	// {
-	// 	path: "/games/new",
-	// 	component: CreateGame,
-	// 	exact: true,
-	// },
-	{
-		path: "/auth/pwd/forgotten",
-		component: ForgotPassword,
-		exact: true,
-	},
 	{
 		path: "/game/:gameid/info",
 		component: GameDetails,
@@ -53,6 +33,32 @@ const Routes = [
 		component: SignupPage,
 		exact: true,
 	},
+	{
+		path: `/users/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/:tab?`,
+		render: "{props => <App {...props}/>}",
+		component: UserTabs,
+		exact: true,
+	},
+	// {
+	// 	path: "/games",
+	// 	component: BrowseGames,
+	// 	exact: true,
+	// },
+	// {
+	// 	path: "/games/filtered",
+	// 	component: BrowseGamesResults,
+	// 	exact: true,
+	// },
+	// {
+	// 	path: "/games/new",
+	// 	component: CreateGame,
+	// 	exact: true,
+	// },
+	// {
+	// 	path: "/auth/pwd/forgotten",
+	// 	component: ForgotPassword,
+	// 	exact: true,
+	// },
 	// {
 	// 	path: "/auth/email/update",
 	// 	component: UpdateEmail,
@@ -68,11 +74,5 @@ const Routes = [
 	// 	component: UpdatePic,
 	// 	exact: true,
 	// },
-	{
-		path: `/users/030fbdfa-ad94-42bd-9633-ee4fa1bf3631/:tab?`,
-		render: "{props => <App {...props}/>}",
-		component: UserTabs,
-		exact: true,
-	},
 ];
 export default Routes;
