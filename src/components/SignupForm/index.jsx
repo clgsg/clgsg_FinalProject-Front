@@ -1,15 +1,13 @@
 import { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
-import Button from "components/Button";
+import { useHistory, useRoutes} from "react-router-dom";
 import { signup } from "services/auth";
 import context from "context/SecurityContext";
 import "index.scss";
 
 const SignupForm = (props) => {
-
-	const { signup } = useContext(context);
-	const [signupError, setsignupError] = useState(false);
+	const { signUp } = useContext(context);
+	const [signupError, setSignupError] = useState(false);
 	const history = useHistory();
 
 	const {
@@ -21,17 +19,12 @@ const SignupForm = (props) => {
 		redirectPath = redirectPath || "/home";
 		history.push(redirectPath);
 	};
+
 	const onSubmit = async (data) => {
+		console.log("onSubmit: ", data)
 		const result = await signup(data);
-		if (result.success) {
-			const state = props.userid || {};
-			redirect(state.prevPath);
-			if (state.userid) {
-				signup(state.userid, result.data.id);
-			}
-		} else {
-			setsignupError(true);
-		}
+
+
 	};
 
 	return (
@@ -70,9 +63,7 @@ const SignupForm = (props) => {
 					<input
 						className="formButton"
 						type="submit"
-						text="Registrarse"
-						onSubmit={signup}
-						to="users/${userid}/games"
+						// text="Registrarse"
 					/>
 				</form>
 			</div>

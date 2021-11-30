@@ -1,6 +1,6 @@
 export const signup =
 	({ post }) =>
-	async() => {
+	async(data) => {
 		try {
 			return (await post(`/auth/signup`)).data;
 		} catch (error) {
@@ -13,7 +13,7 @@ export const login =
 	({ post }) =>
 	async() => {
 		try {
-			return (await post(`/auth/login`));
+			return (await post(`/auth/login`)).data;
 		} catch (error) {
 			console.info("¡Vaya! Parece que hay un problema con el acceso.");
 			return false;
@@ -22,10 +22,10 @@ export const login =
 
 
 export const updateEmail =
-	({ put }) =>
+	({ post }) =>
 	async() => {
 		try {
-			return (await put(`/auth/email/update`)).data;
+			return (await post(`/auth/email/update`)).data;
 		} catch (error) {
 			console.info("¡Vaya! Parece que hay un problema para actualizar tu email.");
 			return false;
@@ -34,9 +34,9 @@ export const updateEmail =
 
 
 export const updatePassword =
-	async ({ put }) =>{
+	async ({ post }) =>{
 			try {
-			return (await put(`/auth/pwd/update`)).data;
+			return (await post(`/auth/pwd/update`)).data;
 		} catch (error) {
 			console.info("¡Vaya! Parece que hay un problema para actualizar tu contraseña.");
 			return false;

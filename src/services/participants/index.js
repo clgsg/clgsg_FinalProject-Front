@@ -11,11 +11,20 @@ export const getParticipants =
 
 export const addParticipant =
 	({ post }) =>
-	async (username, gameid) => {
+	async (userid, gameid) => {
 		try {
-			return (await post(`/participants/new`)).data;
+			return (await post(`participants/:gameid/new/:userid`)).data;
 		} catch (error) {
 			console.info("⛔ Error at addParticipant service: ", error.message);
 			return false;
 		}
 	};
+
+export const removeParticipant = ({ post }) => async (userid, gameid) => {
+	try {
+		return (await post(`participants/:gameid/remove/:userid`)).data;
+	} catch (error) {
+		console.info("⛔ Error at removeParticipant service: ", error.message);
+		return false;
+	}
+}

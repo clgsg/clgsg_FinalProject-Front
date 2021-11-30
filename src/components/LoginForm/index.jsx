@@ -11,6 +11,7 @@ const LoginForm = (props) => {
 	const {login} = useContext(context);
 	const [loginError, setLoginError] = useState(false);
 	const history = useHistory();
+	const userid=props.userid
 
 	const {register, handleSubmit, formState: { errors }} = useForm();
 	const redirect = (redirectPath) => {
@@ -39,17 +40,14 @@ const LoginForm = (props) => {
 						type="text"
 						{...register("email_username", {
 							required: true,
-							minLength: 8,
-							pattern: {
-								value: /^\S+@\S+$/i,
-							},
-						})}
+							minLength: 6,
+							})}
 					/>
 					{errors?.email_username?.type === "required" && (
 						<p>Campo obligatorio</p>
 					)}
 					{errors?.email_username?.type === "minLength" && (
-						<p>8 caracteres mínimo</p>
+						<p>6 caracteres mínimo</p>
 					)}
 
 					{/* include validation with required or other standard HTML validation rules */}
@@ -70,7 +68,7 @@ const LoginForm = (props) => {
 					)}
 					{errors?.password?.type === "pattern" && (
 						<p>
-							Usa mínimo 8 caracteres, incluyendo una mayúscula,
+							Usa entre 8 y 16 caracteres, incluyendo una mayúscula,
 							una minúscula y un dígito
 						</p>
 					)}
@@ -85,8 +83,8 @@ const LoginForm = (props) => {
 					className="formButton"
 					type="submit"
 					text="Acceder"
-					onSubmit={login}
-					to="users/${userid}/games"
+					onClick={login}
+					to={`users/${userid}/games`}
 				/>
 			</form>
 		</>

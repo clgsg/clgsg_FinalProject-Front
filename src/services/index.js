@@ -1,7 +1,7 @@
 import axios from "axios";
 import { login, signup, updatePassword, forgottenPwd} from "./auth"
 import { createGame, getUpcomingGames } from "./games";
-import { getParticipants, addParticipant } from "./participants"
+import { getParticipants, addParticipant, removeParticipant } from "./participants"
 import { getUsersGames, getUserData } from "./users"
 
 const client = axios.create({
@@ -27,7 +27,7 @@ const games = {
 const participants = {
 	getParticipants: getParticipants(client),
 	addParticipant: addParticipant(client),
-	// removeParticipant: removeParticipant(client),
+	removeParticipant: removeParticipant(client),
 }
 
 const users = {

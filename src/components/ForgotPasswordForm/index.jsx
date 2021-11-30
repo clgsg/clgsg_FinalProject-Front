@@ -1,9 +1,10 @@
+import {useContext, useState, useHistory} from "react";
 import Button from "components/Button";
 import "index.scss";
 
 
 function ForgotPasswordForm() {
-	const { login } = useContext(context);
+	const { login } = useContext();
 	const [loginError, setLoginError] = useState(false);
 	const history = useHistory();
 
