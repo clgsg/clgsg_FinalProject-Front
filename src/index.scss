@@ -4,12 +4,18 @@ $font1: 'Roboto';
 $font2: 'Concert One';
 $header_font: 'Road Rage';
 
-
 $main: teal;
 $mainB: rgb(62, 211, 211);
 $secondary: rgb(252, 248, 248);
 $secondaryB: rgb(129, 129, 129);
 $choco: rgb(77, 70, 65);
+
+:root {
+	--space_sm: 6px;
+	--space_md: 12px;
+	--space_lg: 20px;
+	--stack-spacing: var(--space_md);
+}
 
 
 body {
@@ -17,38 +23,27 @@ body {
 	display: flex;
 	justify-content: center;
 	font-family: 'Roboto';
+	padding-left: 20px;
 }
 
-.headerTitle {
-	border: solid 5px $main;
-	width: 90%;
-	padding: 10px;
+.stack, .columns {
+	display: flex;
+	flex-direction: column;
 }
 
-.info {
-	border: solid 1px rgb(100, 100, 100);
-	box-shadow: 6px;
-}
 
-.smallCase {
-	font-size: 0.8rem;
-}
-
-.forms {
-	flex: auto;
-}
 
 i{
 	color: $main;
 	animation: fadein 2s 2ms;
 }
 i:hover, i:active, i:focus {
-  color: $main;
-  cursor: pointer;
-  transform: scale(1, 1.2);
+	color: $main;
+	cursor: pointer;
+	transform: scale(1, 1.2);
 }
 
-button, button:visited {
+button, button:visited, .formButton, .formButton:visited{
 	color: $secondary;
 	background-color: $main;
 	padding-left: 20px;
@@ -60,7 +55,7 @@ button, button:visited {
 	margin-top: 5px;
 }
 
-button:hover, button:focus, button:active {
+button:hover, button:focus, button:active, .formButton:hover, .formButton:focus, .formButton:active {
 	color:$main;
 	background-color: $secondary ;
 	padding-left: 20px;
@@ -120,11 +115,35 @@ acceptedTerms {
 }
 
 .tabWrapper {
-	font-family: 'Courier New', Courier, monospace;
-	background-color: bisque;
+	font-family: $font1;
+	font-size: x-small;
+	width: 100vw;
+	padding: 10px;
+	overflow-y: auto;
 }
 
 .tableWrapper {
-	width: 98vw;
+	width: 100vw;
 }
 
+.headerTitle {
+	border: solid 5px $main;
+	width: 90vw;
+	padding: 10px;
+}
+
+
+.smallCase {
+	font-size: 0.8rem;
+}
+
+form{
+	max-width: 90vw;
+	margin: 2px;
+	display: inline-table;
+}
+
+input {
+	width: 80vw;
+
+}
