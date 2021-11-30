@@ -13,7 +13,7 @@ export const addParticipant =
 	({ post }) =>
 	async (username, gameid) => {
 		try {
-			return (await post(`/games/new`)).data;
+			return (await post(`/participants/new`)).data;
 		} catch (error) {
 			console.info("⛔ Error at addParticipant service: ", error.message);
 			return false;

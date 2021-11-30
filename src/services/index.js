@@ -1,5 +1,5 @@
 import axios from "axios";
-import { login, signup} from "./auth"
+import { login, signup, updatePassword, forgottenPwd} from "./auth"
 import { createGame, getUpcomingGames } from "./games";
 import { getParticipants, addParticipant } from "./participants"
 import { getUsersGames, getUserData } from "./users"
@@ -15,6 +15,8 @@ const client = axios.create({
 const auth ={
 	login: login(client),
 	signup: signup(client),
+	updatePassword: updatePassword(client),
+	forgottenPwd: forgottenPwd(client),
 }
 
 const games = {
@@ -25,6 +27,7 @@ const games = {
 const participants = {
 	getParticipants: getParticipants(client),
 	addParticipant: addParticipant(client),
+	// removeParticipant: removeParticipant(client),
 }
 
 const users = {
